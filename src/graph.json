@@ -1,0 +1,1380 @@
+{
+    "ethchart": {
+        "tokenReserves": [
+            [
+                [
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "01:41 AM"
+                    },
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "01:29 AM"
+                    },
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "01:17 AM"
+                    },
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "01:05 AM"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "2.8005744841430166e+28",
+                        "reserve1": "97358369709222510",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "2.8005744841430166e+28",
+                        "reserve1": "97358369709222510",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "2.8005744841430166e+28",
+                        "reserve1": "97358369709222510",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 27"
+                    },
+                    {
+                        "reserve0": "2.8005744841430166e+28",
+                        "reserve1": "97358369709222510",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 26"
+                    },
+                    {
+                        "reserve0": "2.8005744841430166e+28",
+                        "reserve1": "97358369709222510",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 24"
+                    },
+                    {
+                        "reserve0": "2.8005744841430166e+28",
+                        "reserve1": "97358369709222510",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 23"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "3.0383352746356917e+28",
+                        "reserve1": "89976928958910020",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "2.8005744841430166e+28",
+                        "reserve1": "97358369709222510",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 23"
+                    },
+                    {
+                        "reserve0": "2.7490540950382483e+28",
+                        "reserve1": "99149238234716850",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 17"
+                    },
+                    {
+                        "reserve0": "2.7490540950382483e+28",
+                        "reserve1": "99149238234716850",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 11"
+                    },
+                    {
+                        "reserve0": "3.0630529333969574e+28",
+                        "reserve1": "88957328544346610",
+                        "balance": "10000000000000000000",
+                        "pair": {
+                            "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                            "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "pair": "0xf126ac81688aa0fc16aa41361a3891b6cd78736f"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 5"
+                    }
+                ]
+            ],
+            [
+                [
+                    {
+                        "reserve0": "84183115027161250000",
+                        "reserve1": "1.1726643993335314e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "85242115547633900000",
+                        "reserve1": "1.1580525797335315e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "01:41 AM"
+                    },
+                    {
+                        "reserve0": "85457470357986070000",
+                        "reserve1": "1.1551101615986307e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "01:29 AM"
+                    },
+                    {
+                        "reserve0": "85457470357986070000",
+                        "reserve1": "1.1551101615986307e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "01:17 AM"
+                    },
+                    {
+                        "reserve0": "85457470357986070000",
+                        "reserve1": "1.1551101615986307e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "01:05 AM"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "84183115027161250000",
+                        "reserve1": "1.1726643993335314e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "83371151414763100000",
+                        "reserve1": "1.1830438789237407e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "67353626607024820000",
+                        "reserve1": "1.4601678377436682e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "66569128294521184000",
+                        "reserve1": "1.4763427773802658e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "58120985060179935000",
+                        "reserve1": "1.6900571960768946e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "84183115027161250000",
+                        "reserve1": "1.1726643993335314e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "58797982747659710000",
+                        "reserve1": "1.6705399670828047e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 27"
+                    },
+                    {
+                        "reserve0": "57026620185850650000",
+                        "reserve1": "1.72177462828341e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 26"
+                    },
+                    {
+                        "reserve0": "58396145081909530000",
+                        "reserve1": "1.6809491482709309e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 24"
+                    },
+                    {
+                        "reserve0": "67747111037287990000",
+                        "reserve1": "1.4473646887578462e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 23"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "84183115027161250000",
+                        "reserve1": "1.1726643993335314e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "69872016942593810000",
+                        "reserve1": "1.4031342363203542e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 23"
+                    },
+                    {
+                        "reserve0": "50963005358334210000",
+                        "reserve1": "1.8519934666479922e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 17"
+                    },
+                    {
+                        "reserve0": "55073437520408040000",
+                        "reserve1": "1.7074100381136001e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 11"
+                    },
+                    {
+                        "reserve0": "55781954778735256000",
+                        "reserve1": "1.6787474612081416e+28",
+                        "balance": "6.883107974609801e+26",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                            "pair": "0xb2843c7133289541086fa41673850dbf61cac6db"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 5"
+                    }
+                ]
+            ],
+            [
+                [
+                    {
+                        "reserve0": "18544101711714770000",
+                        "reserve1": "133431879848711890",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "18544101711714770000",
+                        "reserve1": "133431879848711890",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "01:41 AM"
+                    },
+                    {
+                        "reserve0": "18544101711714770000",
+                        "reserve1": "133431879848711890",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "01:29 AM"
+                    },
+                    {
+                        "reserve0": "18544101711714770000",
+                        "reserve1": "133431879848711890",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "01:17 AM"
+                    },
+                    {
+                        "reserve0": "18544101711714770000",
+                        "reserve1": "133431879848711890",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "01:05 AM"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "18544101711714770000",
+                        "reserve1": "133431879848711890",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "18544101711714770000",
+                        "reserve1": "133431879848711890",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "18395828155074537000",
+                        "reserve1": "134468307393417280",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "18044457227544000000",
+                        "reserve1": "137078858749695460",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "18058359139328010000",
+                        "reserve1": "136958838864809000",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 28"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "18544101711714770000",
+                        "reserve1": "133431879848711890",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "19043478542406350000",
+                        "reserve1": "129851790163859150",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 27"
+                    },
+                    {
+                        "reserve0": "19010431312882024000",
+                        "reserve1": "130034945844665150",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 26"
+                    },
+                    {
+                        "reserve0": "21266073562118234000",
+                        "reserve1": "116052627004294220",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 24"
+                    },
+                    {
+                        "reserve0": "25054917749477745000",
+                        "reserve1": "98405915703028800",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 23"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "18544101711714770000",
+                        "reserve1": "133431879848711890",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "01:53 AM"
+                    },
+                    {
+                        "reserve0": "25562042084960866000",
+                        "reserve1": "96447845176288960",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 23"
+                    },
+                    {
+                        "reserve0": "19936051320613855000",
+                        "reserve1": "122163877927752620",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 17"
+                    },
+                    {
+                        "reserve0": "17309974822974670000",
+                        "reserve1": "143009909777330430",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 11"
+                    },
+                    {
+                        "reserve0": "20742345295493878000",
+                        "reserve1": "119235960170664880",
+                        "balance": "67421000000000",
+                        "pair": {
+                            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                            "pair": "0xe8b85a4a7e5fbd5fc21784dfa05b5aa78ceb5d83"
+                        },
+                        "decimal": 9,
+                        "time": "Jul 5"
+                    }
+                ]
+            ]
+        ],
+        "ethPrices": [
+            [
+                1873.856196302892,
+                1872.365447302956,
+                1872.7964982598237,
+                1873.373326975752,
+                1874.3485366610555
+            ],
+            [
+                1873.856196302892,
+                1874.0642423384322,
+                1879.4078277538238,
+                1863.7077708927384,
+                1863.3398506127262
+            ],
+            [
+                1873.856196302892,
+                1874.9357996935264,
+                1859.4874188003237,
+                1849.1693825660543,
+                1880.1482473298693
+            ],
+            [
+                1873.856196302892,
+                1865.2534216686454,
+                1931.8784431590934,
+                1894.3050047794175,
+                1940.6963864670236
+            ]
+        ],
+        "ethBalances": [
+            [
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715
+            ],
+            [
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715
+            ],
+            [
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715
+            ],
+            [
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715,
+                0.395866017215715
+            ]
+        ]
+    },
+    "bscchart": {
+        "tokenReserves": [
+            [
+                [
+                    {
+                        "reserve0": "1.1614431752395241e+25",
+                        "reserve1": "4.800221970517084e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "01:52 AM"
+                    },
+                    {
+                        "reserve0": "1.1617064632110103e+25",
+                        "reserve1": "4.799107628768836e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "01:40 AM"
+                    },
+                    {
+                        "reserve0": "1.1621123387722068e+25",
+                        "reserve1": "4.797400059174408e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "01:28 AM"
+                    },
+                    {
+                        "reserve0": "1.1616947612308382e+25",
+                        "reserve1": "4.7991072211158404e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "01:16 AM"
+                    },
+                    {
+                        "reserve0": "1.1622377512336672e+25",
+                        "reserve1": "4.796847110179818e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "01:04 AM"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "1.1614431752395241e+25",
+                        "reserve1": "4.800221970517084e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "01:52 AM"
+                    },
+                    {
+                        "reserve0": "1.1622229348023485e+25",
+                        "reserve1": "4.7966829676700275e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "1.1620568642916874e+25",
+                        "reserve1": "4.796976271101288e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "1.160213080206003e+25",
+                        "reserve1": "4.803997516402749e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "1.1581733461953164e+25",
+                        "reserve1": "4.811746883335049e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "1.1614431752395241e+25",
+                        "reserve1": "4.800221970517084e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "01:52 AM"
+                    },
+                    {
+                        "reserve0": "1.8521817789224082e+25",
+                        "reserve1": "7.689690399778345e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 27"
+                    },
+                    {
+                        "reserve0": "1.8423749140734e+25",
+                        "reserve1": "7.734609627982118e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 26"
+                    },
+                    {
+                        "reserve0": "1.84093110847687e+25",
+                        "reserve1": "7.737999978530149e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 24"
+                    },
+                    {
+                        "reserve0": "1.8614299556906983e+25",
+                        "reserve1": "7.669120452604661e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 23"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "1.1614431752395241e+25",
+                        "reserve1": "4.800221970517084e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "01:52 AM"
+                    },
+                    {
+                        "reserve0": "1.853829928002356e+25",
+                        "reserve1": "7.700069949526172e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 23"
+                    },
+                    {
+                        "reserve0": "1.8590483206116182e+25",
+                        "reserve1": "7.706890136853438e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 17"
+                    },
+                    {
+                        "reserve0": "1.8819830047488784e+25",
+                        "reserve1": "7.675259008077233e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 11"
+                    },
+                    {
+                        "reserve0": "1.9424362807964547e+25",
+                        "reserve1": "8.01021273135814e+22",
+                        "balance": "5000000000000000",
+                        "pair": {
+                            "token0": "0x55d398326f99059fF775485246999027B3197955",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 5"
+                    }
+                ]
+            ],
+            [
+                [
+                    {
+                        "reserve0": "1.6930429712267499e+25",
+                        "reserve1": "2.9443744434059194e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "01:52 AM"
+                    },
+                    {
+                        "reserve0": "1.6929328875758212e+25",
+                        "reserve1": "2.9445645531807115e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "01:40 AM"
+                    },
+                    {
+                        "reserve0": "1.695131297518138e+25",
+                        "reserve1": "2.9407361959700663e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "01:28 AM"
+                    },
+                    {
+                        "reserve0": "1.6957760403203083e+25",
+                        "reserve1": "2.939615311519196e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "01:16 AM"
+                    },
+                    {
+                        "reserve0": "1.6958373960162863e+25",
+                        "reserve1": "2.9395043516855684e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "01:04 AM"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "1.6930429712267499e+25",
+                        "reserve1": "2.9443744434059194e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "01:52 AM"
+                    },
+                    {
+                        "reserve0": "1.6897228178861032e+25",
+                        "reserve1": "2.949839955801724e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "1.6912045640600123e+25",
+                        "reserve1": "2.9471137562692005e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "1.7061728451260348e+25",
+                        "reserve1": "2.921057359356235e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    },
+                    {
+                        "reserve0": "1.6930541729835754e+25",
+                        "reserve1": "2.9344395861248275e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 28"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "1.6930429712267499e+25",
+                        "reserve1": "2.9443744434059194e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "01:52 AM"
+                    },
+                    {
+                        "reserve0": "1.7128805320048961e+25",
+                        "reserve1": "2.899600786645708e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 27"
+                    },
+                    {
+                        "reserve0": "1.670203677789913e+25",
+                        "reserve1": "2.97172249323469e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 26"
+                    },
+                    {
+                        "reserve0": "1.666601335486357e+25",
+                        "reserve1": "2.974052837349025e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 24"
+                    },
+                    {
+                        "reserve0": "1.6952365529025711e+25",
+                        "reserve1": "2.9206525962911304e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 23"
+                    }
+                ],
+                [
+                    {
+                        "reserve0": "1.6930429712267499e+25",
+                        "reserve1": "2.9443744434059194e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "01:52 AM"
+                    },
+                    {
+                        "reserve0": "1.721208250700811e+25",
+                        "reserve1": "2.87542131700566e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 23"
+                    },
+                    {
+                        "reserve0": "1.6708834353344236e+25",
+                        "reserve1": "2.963126071513797e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 17"
+                    },
+                    {
+                        "reserve0": "2.0800829375045077e+25",
+                        "reserve1": "2.3302901721252343e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 11"
+                    },
+                    {
+                        "reserve0": "2.0300417142505266e+25",
+                        "reserve1": "2.388067491709595e+21",
+                        "balance": "2000000000000000000",
+                        "pair": {
+                            "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                            "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3"
+                        },
+                        "decimal": 18,
+                        "time": "Jul 5"
+                    }
+                ]
+            ]
+        ],
+        "bnbPrices": [
+            [
+                242.32815402020427,
+                242.35492627325985,
+                242.5225377906463,
+                242.5225377906463,
+                242.520540023731
+            ],
+            [
+                242.32815402020427,
+                242.30943070010417,
+                242.20573936329342,
+                241.27966707001286,
+                240.62190795445792
+            ],
+            [
+                242.32815402020427,
+                241.05039507062457,
+                238.4118321356079,
+                238.22084880408406,
+                242.76557860113758
+            ],
+            [
+                242.32815402020427,
+                241.2401370730969,
+                245.62131275086162,
+                245.16314188029332,
+                242.01956801607275
+            ]
+        ],
+        "bnbBalances": [
+            [
+                0.195120416,
+                0.195120416,
+                0.195120416,
+                0.195120416,
+                0.195120416
+            ],
+            [
+                0.195120416,
+                0.195120416,
+                0.195120416,
+                0.195120416,
+                0.195120416
+            ],
+            [
+                0.195120416,
+                0.195120416,
+                0.195120416,
+                0.195120416,
+                0.195120416
+            ],
+            [
+                0.195120416,
+                0.195120416,
+                0.195120416,
+                0.195120416,
+                0.195120416
+            ]
+        ]
+    }
+}

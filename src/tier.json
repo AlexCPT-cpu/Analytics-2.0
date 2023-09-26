@@ -1,0 +1,560 @@
+{
+    "bscData": {
+        "bscBalance": {
+            "balanceNow": 0.195120416,
+            "balances": {
+                "balances": [
+                    0.195120416,
+                    0.195120416,
+                    0.195120416,
+                    0.195120416,
+                    0.195120416
+                ],
+                "balanceNow": 0.195120416
+            }
+        },
+        "bnb_Prices": {
+            "bnb_Price0": 211.25,
+            "bnb_Price1": 211.25,
+            "bnb_Price2": 211.31,
+            "bnb_Price3": 211.31
+        },
+        "bscData": [
+            [
+                {
+                    "address": "0x55d398326f99059ff775485246999027b3197955",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x55d398326f99059fF775485246999027B3197955",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "10488210904064482450257547",
+                        "reserve1": "49540670532977902125928",
+                        "timestamp": "1695694420",
+                        "block": {
+                            "block": 32067296,
+                            "timestamp": 1695694420
+                        },
+                        "balance": "5000000000000000"
+                    }
+                },
+                {
+                    "address": "0x55d398326f99059ff775485246999027b3197955",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x55d398326f99059fF775485246999027B3197955",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "10494251079706860854973912",
+                        "reserve1": "49511457024770167182335",
+                        "timestamp": "1695693702",
+                        "block": {
+                            "block": 32067058,
+                            "timestamp": 1695693705
+                        },
+                        "balance": "5000000000000000"
+                    }
+                },
+                {
+                    "address": "0x55d398326f99059ff775485246999027b3197955",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x55d398326f99059fF775485246999027B3197955",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "10458869184404482054872777",
+                        "reserve1": "49680040613982334996634",
+                        "timestamp": "1695692985",
+                        "block": {
+                            "block": 32066818,
+                            "timestamp": 1695692985
+                        },
+                        "balance": "5000000000000000"
+                    }
+                },
+                {
+                    "address": "0x55d398326f99059ff775485246999027b3197955",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x55d398326f99059fF775485246999027B3197955",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "10457307822541644419551081",
+                        "reserve1": "49687114896760763762873",
+                        "timestamp": "1695692265",
+                        "block": {
+                            "block": 32066578,
+                            "timestamp": 1695692265
+                        },
+                        "balance": "5000000000000000"
+                    }
+                },
+                {
+                    "address": "0x55d398326f99059ff775485246999027b3197955",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x55d398326f99059fF775485246999027B3197955",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "10454188440966724396764541",
+                        "reserve1": "49701505049365625408265",
+                        "timestamp": "1695691545",
+                        "block": {
+                            "block": 32066338,
+                            "timestamp": 1695691545
+                        },
+                        "balance": "5000000000000000"
+                    }
+                }
+            ],
+            [
+                {
+                    "address": "0x256d1fce1b1221e8398f65f9b36033ce50b2d497",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "11895177278878547391196057",
+                        "reserve1": "1847744157807018730442",
+                        "timestamp": "1695693978",
+                        "block": {
+                            "block": 32067296,
+                            "timestamp": 1695694420
+                        },
+                        "balance": "2000000000000000000"
+                    }
+                },
+                {
+                    "address": "0x256d1fce1b1221e8398f65f9b36033ce50b2d497",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "11888619106749202797333957",
+                        "reserve1": "1848760888982335167418",
+                        "timestamp": "1695693663",
+                        "block": {
+                            "block": 32067058,
+                            "timestamp": 1695693705
+                        },
+                        "balance": "2000000000000000000"
+                    }
+                },
+                {
+                    "address": "0x256d1fce1b1221e8398f65f9b36033ce50b2d497",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "11887261192749202797333957",
+                        "reserve1": "1848971549967019723256",
+                        "timestamp": "1695692868",
+                        "block": {
+                            "block": 32066818,
+                            "timestamp": 1695692985
+                        },
+                        "balance": "2000000000000000000"
+                    }
+                },
+                {
+                    "address": "0x256d1fce1b1221e8398f65f9b36033ce50b2d497",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "11836189848833347148747792",
+                        "reserve1": "1856928961086782409336",
+                        "timestamp": "1695691248",
+                        "block": {
+                            "block": 32066578,
+                            "timestamp": 1695692265
+                        },
+                        "balance": "2000000000000000000"
+                    }
+                },
+                {
+                    "address": "0x256d1fce1b1221e8398f65f9b36033ce50b2d497",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+                        "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                        "pair": "0xa0F98321F02E90E13d04B08C1B9F3252DDe15Fd3",
+                        "exchange": "PancakeV2"
+                    },
+                    "reserves": {
+                        "reserve0": "11836189848833347148747792",
+                        "reserve1": "1856928961086782409336",
+                        "timestamp": "1695691248",
+                        "block": {
+                            "block": 32066338,
+                            "timestamp": 1695691545
+                        },
+                        "balance": "2000000000000000000"
+                    }
+                }
+            ]
+        ]
+    },
+    "ethData": {
+        "ethBalance": {
+            "balanceNow": 0.00008090554416,
+            "balances": {
+                "balances": [
+                    0.00008090554416,
+                    0.00008090554416,
+                    0.00008090554416,
+                    0.00008090554416,
+                    0.00008090554416
+                ],
+                "balanceNow": 0.00008090554416
+            }
+        },
+        "eth_Prices": {
+            "eth_Price0": 1592.32,
+            "eth_Price1": 1591.02,
+            "eth_Price2": 1592.12,
+            "eth_Price3": 1592.32
+        },
+        "ethData": [
+            [
+                {
+                    "address": "0xe1ec350ea16d1ddaff57f31387b2d9708eb7ce28",
+                    "decimals": 9,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                        "pair": "0xe8b85A4a7e5fBD5Fc21784Dfa05B5Aa78ceB5D83",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "18645254292315182496",
+                        "reserve1": "134136975108189261",
+                        "timestamp": "1695578243",
+                        "block": {
+                            "block": 18216901,
+                            "timestamp": 1695694415
+                        },
+                        "balance": "67421000000000"
+                    }
+                },
+                {
+                    "address": "0xe1ec350ea16d1ddaff57f31387b2d9708eb7ce28",
+                    "decimals": 9,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                        "pair": "0xe8b85A4a7e5fBD5Fc21784Dfa05B5Aa78ceB5D83",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "18645254292315182496",
+                        "reserve1": "134136975108189261",
+                        "timestamp": "1695578243",
+                        "block": {
+                            "block": 18216841,
+                            "timestamp": 1695693695
+                        },
+                        "balance": "67421000000000"
+                    }
+                },
+                {
+                    "address": "0xe1ec350ea16d1ddaff57f31387b2d9708eb7ce28",
+                    "decimals": 9,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                        "pair": "0xe8b85A4a7e5fBD5Fc21784Dfa05B5Aa78ceB5D83",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "18645254292315182496",
+                        "reserve1": "134136975108189261",
+                        "timestamp": "1695578243",
+                        "block": {
+                            "block": 18216781,
+                            "timestamp": 1695692975
+                        },
+                        "balance": "67421000000000"
+                    }
+                },
+                {
+                    "address": "0xe1ec350ea16d1ddaff57f31387b2d9708eb7ce28",
+                    "decimals": 9,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                        "pair": "0xe8b85A4a7e5fBD5Fc21784Dfa05B5Aa78ceB5D83",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "18645254292315182496",
+                        "reserve1": "134136975108189261",
+                        "timestamp": "1695578243",
+                        "block": {
+                            "block": 18216721,
+                            "timestamp": 1695692255
+                        },
+                        "balance": "67421000000000"
+                    }
+                },
+                {
+                    "address": "0xe1ec350ea16d1ddaff57f31387b2d9708eb7ce28",
+                    "decimals": 9,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xe1eC350ea16D1DdAFF57F31387B2d9708Eb7ce28",
+                        "pair": "0xe8b85A4a7e5fBD5Fc21784Dfa05B5Aa78ceB5D83",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "18645254292315182496",
+                        "reserve1": "134136975108189261",
+                        "timestamp": "1695578243",
+                        "block": {
+                            "block": 18216661,
+                            "timestamp": 1695691535
+                        },
+                        "balance": "67421000000000"
+                    }
+                }
+            ],
+            [
+                {
+                    "address": "0x2c5bc2ba3614fd27fcc7022ea71d9172e2632c16",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                        "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "pair": "0xf126AC81688aa0fC16aa41361a3891b6cd78736F",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33201406751069972972625996360",
+                        "reserve1": "83005696864165755",
+                        "timestamp": "1695529763",
+                        "block": {
+                            "block": 18216901,
+                            "timestamp": 1695694415
+                        },
+                        "balance": "10000000000000000000"
+                    }
+                },
+                {
+                    "address": "0x2c5bc2ba3614fd27fcc7022ea71d9172e2632c16",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                        "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "pair": "0xf126AC81688aa0fC16aa41361a3891b6cd78736F",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33201406751069972972625996360",
+                        "reserve1": "83005696864165755",
+                        "timestamp": "1695529763",
+                        "block": {
+                            "block": 18216841,
+                            "timestamp": 1695693695
+                        },
+                        "balance": "10000000000000000000"
+                    }
+                },
+                {
+                    "address": "0x2c5bc2ba3614fd27fcc7022ea71d9172e2632c16",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                        "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "pair": "0xf126AC81688aa0fC16aa41361a3891b6cd78736F",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33201406751069972972625996360",
+                        "reserve1": "83005696864165755",
+                        "timestamp": "1695529763",
+                        "block": {
+                            "block": 18216781,
+                            "timestamp": 1695692975
+                        },
+                        "balance": "10000000000000000000"
+                    }
+                },
+                {
+                    "address": "0x2c5bc2ba3614fd27fcc7022ea71d9172e2632c16",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                        "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "pair": "0xf126AC81688aa0fC16aa41361a3891b6cd78736F",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33201406751069972972625996360",
+                        "reserve1": "83005696864165755",
+                        "timestamp": "1695529763",
+                        "block": {
+                            "block": 18216721,
+                            "timestamp": 1695692255
+                        },
+                        "balance": "10000000000000000000"
+                    }
+                },
+                {
+                    "address": "0x2c5bc2ba3614fd27fcc7022ea71d9172e2632c16",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+                        "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "pair": "0xf126AC81688aa0fC16aa41361a3891b6cd78736F",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33201406751069972972625996360",
+                        "reserve1": "83005696864165755",
+                        "timestamp": "1695529763",
+                        "block": {
+                            "block": 18216661,
+                            "timestamp": 1695691535
+                        },
+                        "balance": "10000000000000000000"
+                    }
+                }
+            ],
+            [
+                {
+                    "address": "0xf03d5fc6e08de6ad886fca34abf9a59ef633b78a",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                        "pair": "0xB2843C7133289541086fA41673850Dbf61cAC6Db",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33057490093066549225",
+                        "reserve1": "30774875738507900031229708379",
+                        "timestamp": "1695692831",
+                        "block": {
+                            "block": 18216901,
+                            "timestamp": 1695694415
+                        },
+                        "balance": "688310797460980084544538575"
+                    }
+                },
+                {
+                    "address": "0xf03d5fc6e08de6ad886fca34abf9a59ef633b78a",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                        "pair": "0xB2843C7133289541086fA41673850Dbf61cAC6Db",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33057490093066549225",
+                        "reserve1": "30774875738507900031229708379",
+                        "timestamp": "1695692831",
+                        "block": {
+                            "block": 18216841,
+                            "timestamp": 1695693695
+                        },
+                        "balance": "688310797460980084544538575"
+                    }
+                },
+                {
+                    "address": "0xf03d5fc6e08de6ad886fca34abf9a59ef633b78a",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                        "pair": "0xB2843C7133289541086fA41673850Dbf61cAC6Db",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33057490093066549225",
+                        "reserve1": "30774875738507900031229708379",
+                        "timestamp": "1695692831",
+                        "block": {
+                            "block": 18216781,
+                            "timestamp": 1695692975
+                        },
+                        "balance": "688310797460980084544538575"
+                    }
+                },
+                {
+                    "address": "0xf03d5fc6e08de6ad886fca34abf9a59ef633b78a",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                        "pair": "0xB2843C7133289541086fA41673850Dbf61cAC6Db",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33057490093066549125",
+                        "reserve1": "30774875738507900124045439473",
+                        "timestamp": "1695683423",
+                        "block": {
+                            "block": 18216721,
+                            "timestamp": 1695692255
+                        },
+                        "balance": "688310797460980084544538575"
+                    }
+                },
+                {
+                    "address": "0xf03d5fc6e08de6ad886fca34abf9a59ef633b78a",
+                    "decimals": 18,
+                    "pair": {
+                        "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "token1": "0xF03D5fC6E08dE6Ad886fCa34aBF9a59ef633b78a",
+                        "pair": "0xB2843C7133289541086fA41673850Dbf61cAC6Db",
+                        "exchange": "UniswapV2"
+                    },
+                    "reserves": {
+                        "reserve0": "33057490093066549125",
+                        "reserve1": "30774875738507900124045439473",
+                        "timestamp": "1695683423",
+                        "block": {
+                            "block": 18216661,
+                            "timestamp": 1695691535
+                        },
+                        "balance": "688310797460980084544538575"
+                    }
+                }
+            ]
+        ]
+    },
+    "time": 17.604,
+    "timestamp": 1695694445474
+}
