@@ -168,7 +168,7 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
           bnb_Price2,
           bnb_Price3,
         },
-        bscData: ultimate[1],
+        bscData: ultimate[0],
       };
       const ethData = {
         ethBalance,
@@ -178,7 +178,7 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
           eth_Price2,
           eth_Price3,
         },
-        ethData: ultimate[0],
+        ethData: ultimate[1],
       };
       const end = new Date().getTime();
       const time = end - start;

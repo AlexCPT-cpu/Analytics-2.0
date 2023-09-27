@@ -397,7 +397,6 @@ const UserTab = ({ userId }) => {
           address: userId,
           tier: '1H',
         });
-
         setbuttons([
           {
             variant: 'contained',
