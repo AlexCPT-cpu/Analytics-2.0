@@ -282,7 +282,6 @@ const UserTab = ({ userId }) => {
             address: userId,
             tier: '1W',
           });
-          console.log(data);
           setbuttons([
             {
               variant: 'outlined',
