@@ -103,7 +103,7 @@ const Page = () => {
   //       const res = await axios.post('/api/reserve', {
   //         tokens: { ethTokens: eth, bscTokens: bsc },
   //         address: userId,
-  //         tier: '1D',
+  //         tier: '1W',
   //       });
 
   //       console.log(res);

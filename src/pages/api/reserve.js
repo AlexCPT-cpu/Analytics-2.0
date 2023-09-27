@@ -36,8 +36,8 @@ export default async function handler(req, res) {
       }
     } else if (tier === '1W') {
       try {
-        const bscTokens = tokens.ethTokens;
-        const ethTokens = tokens.bscTokens;
+        const bscTokens = tokens.bscTokens;
+        const ethTokens = tokens.ethTokens;
         const timing = intervals[2];
         const data = await reserveTier(address, '/history/1W', timing, bscTokens, ethTokens);
         res.status(200).json(data);
@@ -50,8 +50,8 @@ export default async function handler(req, res) {
       }
     } else if (tier === '1M') {
       try {
-        const bscTokens = tokens.ethTokens;
-        const ethTokens = tokens.bscTokens;
+        const bscTokens = tokens.bscTokens;
+        const ethTokens = tokens.ethTokens;
         const timing = intervals[3];
         const data = await reserveTier(address, '/history/1M', timing, bscTokens, ethTokens);
         res.status(200).json(data);

@@ -417,14 +417,10 @@ const UserTab = ({ userId }) => {
           },
         ]);
         setDuratia('1H');
-
-        if (data.bscData && data.ethData) {
-          const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
-
-          setEthDuration(ethValue);
-          setBscDuration(bscValue);
-          setChartArr(tier0);
-        }
+        const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
+        setEthDuration(ethValue);
+        setBscDuration(bscValue);
+        setChartArr(tier0);
       } catch (error) {
         console.log(error);
       } finally {

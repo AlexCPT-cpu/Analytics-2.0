@@ -1,9 +1,10 @@
-import getBlockByTimestamp from 'src/lib/chats/eth/getBlockByTimestamp';
+import getBlockByTimestamp from './timestamps/getBlockByTimestamp';
 
 const ethBlock = async (timing, web3Eth) => {
   const times = await Promise.all(
-    timing.map(async (time) => {
-      const blockObj = await getBlockByTimestamp(Math.floor(time / 1000));
+    timing.map(async (time, i) => {
+      const index = i % 3;
+      const blockObj = await getBlockByTimestamp(Math.floor(time / 1000), index);
       const block = await web3Eth.eth.getBlock(parseInt(blockObj));
       return {
         block: parseInt(block.number),

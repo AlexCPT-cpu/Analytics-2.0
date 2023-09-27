@@ -4,9 +4,7 @@ import axios from 'axios';
 import Web3 from 'web3';
 import { kv } from '@vercel/kv';
 import { bscPrice, bscPriceNow } from 'src/lib/chats/bsc/pricesbsc';
-import getBlockByTimestampBsc from 'src/lib/chats/bsc/getBlockByTimestampBsc';
 import { ethPrice, ethPriceNow } from 'src/lib/chats/eth/prices';
-import getBlockByTimestamp from 'src/lib/chats/eth/getBlockByTimestamp';
 import getReservesBsc from 'src/lib/chats/bsc/getReservesBsc';
 import getHistoryBsc from 'src/lib/moralis/bsc/getHistoryBsc';
 import getHistoryBscV3 from 'src/lib/moralis/bsc/getHistoryBscV3';
@@ -15,6 +13,8 @@ import getHistory from 'src/lib/moralis/eth/getHistory';
 import getHistoryV3 from 'src/lib/moralis/eth/getHistoryV3';
 import getBalances from 'src/lib/moralis/getBalances';
 import { CircularReplacer, Stringify } from 'src/helpers/CircularReplacer';
+import getBlockByTimestampBsc from 'src/libs/timestamps/getBlockByTimestampBsc';
+import getBlockByTimestamp from 'src/libs/timestamps/getBlockByTimestamp';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -35,8 +35,9 @@ export default async function handler(req, res) {
         const bnb_PriceNow = await bscPriceNow();
 
         const blocksBsc = await Promise.all(
-          timing.map(async (time) => {
-            const blockObj = await getBlockByTimestampBsc(Math.floor(time / 1000));
+          timing.map(async (time, i) => {
+            const index = i % 3;
+            const blockObj = await getBlockByTimestampBsc(Math.floor(time / 1000), index);
             const block = await web3Bsc.eth.getBlock(parseInt(blockObj));
             return {
               block: parseInt(block.number),
@@ -46,8 +47,9 @@ export default async function handler(req, res) {
         );
         const eth_PriceNow = await ethPriceNow();
         const blocks = await Promise.all(
-          timing.map(async (time) => {
-            const blockObj = await getBlockByTimestamp(Math.floor(time / 1000));
+          timing.map(async (time, i) => {
+            const index = i % 3;
+            const blockObj = await getBlockByTimestamp(Math.floor(time / 1000), index);
             const block = await web3.eth.getBlock(parseInt(blockObj));
             return {
               block: parseInt(block.number),

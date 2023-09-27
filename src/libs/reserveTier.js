@@ -34,7 +34,7 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
 
       const ultimate = await Promise.all(
         tokensArr.map(async (tokenAr, index) => {
-          if (index == 0) {
+          if (index === 0) {
             const bscArr = await Promise.all(
               tokenAr.map(async (token) => {
                 if (token.pair.exchange == 'PancakeV2') {
@@ -94,7 +94,7 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
           } else {
             const ethArr = await Promise.all(
               tokenAr.map(async (token) => {
-                if (token.pair.exchange == 'UniswapV2') {
+                if (token.pair.exchange === 'UniswapV2') {
                   const pair = await Promise.all(
                     blocksEth.map(async (block) => {
                       try {
@@ -119,9 +119,9 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
                     })
                   );
                   return pair;
-                } else if (token.pair.exchange == 'UniswapV3') {
+                } else if (token.pair.exchange === 'UniswapV3') {
                   const pair = await Promise.all(
-                    blocksBsc.map(async (block) => {
+                    blocksEth.map(async (block) => {
                       try {
                         const pairData = await getHistoryBscV3(
                           token.address,
@@ -168,7 +168,7 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
           bnb_Price2,
           bnb_Price3,
         },
-        bscData: ultimate[0],
+        bscData: ultimate[1],
       };
       const ethData = {
         ethBalance,
@@ -178,7 +178,7 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
           eth_Price2,
           eth_Price3,
         },
-        ethData: ultimate[1],
+        ethData: ultimate[0],
       };
       const end = new Date().getTime();
       const time = end - start;
