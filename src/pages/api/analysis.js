@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       const parsed = await kv.get(address);
       const cachedData = JSON.parse(JSON.stringify(parsed));
 
-      if (!cachedData && cachedData.timestamp && cachedData.timestamp + 3600000 > Date.now()) {
+      if (cachedData && cachedData.timestamp && cachedData.timestamp + 3600000 > Date.now()) {
         res.status(200).json(cachedData);
       } else {
         const timing = timings();
