@@ -181,7 +181,7 @@ const formatTier = (tier, allData, bscData) => {
   ];
   return {
     tier0: tierFinal,
-    ethValue: sumsEth[4].value ? sumsEth[4]?.value : 0,
+    ethValue: sumsEth[4]?.value ? sumsEth[4]?.value : 0,
     bscValue: sumsBsc[4]?.value ? sumsBsc[4]?.value : 0,
   };
 };
