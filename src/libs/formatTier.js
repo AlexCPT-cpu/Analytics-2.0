@@ -83,70 +83,107 @@ const formatTier = (tier, allData, bscData) => {
 
   const sumsBsc = [];
   const sumsEth = [];
-  for (let i = 0; i < 5; i++) {
-    try {
-      let sum = 0;
-      BnbtierMaps?.forEach((subArray) => {
-        if (subArray) {
-          sum += subArray[i]?.value;
+  if (BnbtierMaps.length > 0) {
+    for (let i = 0; i < 5; i++) {
+      try {
+        let sum = 0;
+        BnbtierMaps?.forEach((subArray) => {
+          if (subArray) {
+            sum += subArray[i]?.value;
+          }
+        });
+        if (BnbtierMaps[0] !== null || undefined) {
+          if (BnbtierMaps[0][i] !== null || undefined) {
+            sumsBsc?.push({
+              value: sum,
+              time: BnbtierMaps[0][i]?.time,
+            });
+          }
         }
-      });
-      if (BnbtierMaps[0] !== null || undefined) {
-        if (BnbtierMaps[0][i] !== null || undefined) {
-          sumsBsc?.push({
-            value: sum,
-            time: BnbtierMaps[0][i]?.time,
-          });
-        }
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
     }
   }
 
-  for (let i = 0; i < 5; i++) {
-    try {
-      let sum = 0;
-      EthtierMaps?.forEach((subArray) => {
-        if (subArray) {
-          sum += subArray[i]?.value;
+  if (EthtierMaps.length > 0) {
+    for (let i = 0; i < 5; i++) {
+      try {
+        let sum = 0;
+        EthtierMaps?.forEach((subArray) => {
+          if (subArray) {
+            sum += subArray[i]?.value;
+          }
+        });
+        if (EthtierMaps[0] !== null || undefined) {
+          if (EthtierMaps[(0)[i]] !== null || undefined)
+            sumsEth?.push({
+              value: sum,
+              time: EthtierMaps[0][i]?.time,
+            });
         }
-      });
-      if (EthtierMaps[0] !== null || undefined) {
-        if (EthtierMaps[(0)[i]] !== null || undefined)
-          sumsEth?.push({
-            value: sum,
-            time: EthtierMaps[0][i]?.time,
-          });
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
     }
   }
 
+  const item0 = sumsBsc[4]?.value
+    ? sumsBsc[4]?.value
+    : 0 + sumsEth[4]?.value
+    ? sumsEth[4]?.value
+    : 0;
+
+  const item1 = sumsBsc[3]?.value
+    ? sumsBsc[3]?.value
+    : 0 + sumsEth[3]?.value
+    ? sumsEth[3]?.value
+    : 0;
+
+  const item2 = sumsBsc[2]?.value
+    ? sumsBsc[2]?.value
+    : 0 + sumsEth[2]?.value
+    ? sumsEth[2]?.value
+    : 0;
+
+  const item3 = sumsBsc[1]?.value
+    ? sumsBsc[1]?.value
+    : 0 + sumsEth[1]?.value
+    ? sumsEth[1]?.value
+    : 0;
+
+  const item4 = sumsBsc[0]?.value
+    ? sumsBsc[0]?.value
+    : 0 + sumsEth[0]?.value
+    ? sumsEth[0]?.value
+    : 0;
   const tierFinal = [
     {
-      value: sumsBsc[4].value + sumsEth[4].value,
-      time: sumsBsc[4].time !== null || undefined ? sumsBsc[4].time : sumsEth[4].time,
+      value: item0,
+      time: sumsBsc[4]?.time !== null || undefined ? sumsBsc[4]?.time : sumsEth[4]?.time,
     },
     {
-      value: sumsBsc[3].value + sumsEth[3].value,
-      time: sumsBsc[3].time !== null || undefined ? sumsBsc[3].time : sumsEth[3].time,
+      value: item1,
+      time: sumsBsc[3]?.time !== null || undefined ? sumsBsc[3]?.time : sumsEth[3]?.time,
     },
     {
-      value: sumsBsc[2].value + sumsEth[2].value,
-      time: sumsBsc[2].time !== null || undefined ? sumsBsc[2].time : sumsEth[2].time,
+      value: item2,
+      time: sumsBsc[2]?.time !== null || undefined ? sumsBsc[2]?.time : sumsEth[2]?.time,
     },
     {
-      value: sumsBsc[1].value + sumsEth[1].value,
-      time: sumsBsc[1].time !== null || undefined ? sumsBsc[1].time : sumsEth[1].time,
+      value: item3,
+      time: sumsBsc[1]?.time !== null || undefined ? sumsBsc[1]?.time : sumsEth[1]?.time,
     },
     {
-      value: sumsBsc[0].value + sumsEth[0].value,
-      time: sumsBsc[0].time !== null || undefined ? sumsBsc[0].time : sumsEth[0].time,
+      value: item4,
+      time: sumsBsc[0]?.time !== null || undefined ? sumsBsc[0]?.time : sumsEth[0]?.time,
     },
   ];
-  return { tier0: tierFinal, ethValue: sumsEth[4].value, bscValue: sumsBsc[4].value };
+  return {
+    tier0: tierFinal,
+    ethValue: sumsEth[4].value ? sumsEth[4]?.value : 0,
+    bscValue: sumsBsc[4]?.value ? sumsBsc[4]?.value : 0,
+  };
 };
 
 export default formatTier;

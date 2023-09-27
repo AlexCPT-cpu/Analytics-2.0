@@ -98,27 +98,28 @@ const UserTab = ({ userId }) => {
       // });
       // console.timeEnd("apiCall");
       const txs = [];
+      if (allData?.transactions?.data?.transactions.length > 0) {
+        await Promise.all(
+          allData?.transactions?.data?.transactions?.map(async (transaction) => {
+            const date2 = new Date(transaction.timestamp);
+            const day = date2.getDate();
+            const month = date2.getMonth();
+            const date = `${months[month]}, ${day}`;
 
-      await Promise.all(
-        allData.transactions.data.transactions?.map(async (transaction) => {
-          const date2 = new Date(transaction.timestamp);
-          const day = date2.getDate();
-          const month = date2.getMonth();
-          const date = `${months[month]}, ${day}`;
+            txs.push({
+              ...transaction,
+              date: date,
+              jsDate: date2,
+            });
+          })
+        );
 
-          txs.push({
-            ...transaction,
-            date: date,
-            jsDate: date2,
-          });
-        })
-      );
-
-      const sorted = txs.sort((a, b) => b.jsDate - a.jsDate);
-      setHistory(sorted);
+        const sorted = txs.sort((a, b) => b.jsDate - a.jsDate);
+        setHistory(sorted);
+      }
     };
     setTransactions();
-  }, [userId, setHistory, allData.transactions.data.transactions]);
+  }, [userId, setHistory, allData]);
 
   const slicedHistory = useMemo(() => history.slice(0, 7), [history]);
 

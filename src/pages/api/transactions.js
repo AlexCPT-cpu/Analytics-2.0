@@ -1,5 +1,6 @@
 import { bearerToken } from 'src/config/index';
 import axios from 'axios';
+import { kv } from '@vercel/kv';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
