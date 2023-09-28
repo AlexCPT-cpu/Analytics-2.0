@@ -128,61 +128,66 @@ const formatTier = (tier, allData, bscData) => {
     }
   }
 
-  const item0 = sumsBsc[4]?.value
-    ? sumsBsc[4]?.value
-    : 0 + sumsEth[4]?.value
-    ? sumsEth[4]?.value
-    : 0;
+  const bscLength = sumsBsc.length > 0 ? true : false;
+  const ethLength = sumsEth.length > 0 ? true : false;
 
-  const item1 = sumsBsc[3]?.value
-    ? sumsBsc[3]?.value
-    : 0 + sumsEth[3]?.value
-    ? sumsEth[3]?.value
-    : 0;
+  const item0 = bscLength ? sumsBsc[4]?.value : 0 + ethLength ? sumsEth[4]?.value : 0;
 
-  const item2 = sumsBsc[2]?.value
-    ? sumsBsc[2]?.value
-    : 0 + sumsEth[2]?.value
-    ? sumsEth[2]?.value
-    : 0;
+  const item1 = bscLength ? sumsBsc[3]?.value : 0 + ethLength ? sumsEth[3]?.value : 0;
 
-  const item3 = sumsBsc[1]?.value
-    ? sumsBsc[1]?.value
-    : 0 + sumsEth[1]?.value
-    ? sumsEth[1]?.value
-    : 0;
+  const item2 = bscLength ? sumsBsc[2]?.value : 0 + ethLength ? sumsEth[2]?.value : 0;
 
-  const item4 = sumsBsc[0]?.value
-    ? sumsBsc[0]?.value
-    : 0 + sumsEth[0]?.value
-    ? sumsEth[0]?.value
-    : 0;
+  const item3 = bscLength ? sumsBsc[1]?.value : 0 + ethLength ? sumsEth[1]?.value : 0;
+
+  const item4 = bscLength ? sumsBsc[0]?.value : 0 + ethLength ? sumsEth[0]?.value : 0;
+
   const tierFinal = [
     {
       value: item0,
-      time: sumsBsc[4]?.time !== null || undefined ? sumsBsc[4]?.time : sumsEth[4]?.time,
+      time: bscLength
+        ? sumsBsc[4]?.time
+        : ethLength
+        ? sumsEth[4]?.time
+        : formatDate(new Date().getTime()),
     },
     {
       value: item1,
-      time: sumsBsc[3]?.time !== null || undefined ? sumsBsc[3]?.time : sumsEth[3]?.time,
+      time: bscLength
+        ? sumsBsc[3]?.time
+        : ethLength
+        ? sumsEth[3]?.time
+        : formatDate(new Date().getTime()),
     },
     {
       value: item2,
-      time: sumsBsc[2]?.time !== null || undefined ? sumsBsc[2]?.time : sumsEth[2]?.time,
+      time: bscLength
+        ? sumsBsc[2]?.time
+        : ethLength
+        ? sumsEth[2]?.time
+        : formatDate(new Date().getTime()),
     },
     {
       value: item3,
-      time: sumsBsc[1]?.time !== null || undefined ? sumsBsc[1]?.time : sumsEth[1]?.time,
+      time: bscLength
+        ? sumsBsc[1]?.time
+        : ethLength
+        ? sumsEth[1]?.time
+        : formatDate(new Date().getTime()),
     },
     {
       value: item4,
-      time: sumsBsc[0]?.time !== null || undefined ? sumsBsc[0]?.time : sumsEth[0]?.time,
+      time: bscLength
+        ? sumsBsc[0]?.time
+        : ethLength
+        ? sumsEth[0]?.time
+        : formatDate(new Date().getTime()),
     },
   ];
+
   return {
     tier0: tierFinal,
-    ethValue: sumsEth[4]?.value ? sumsEth[4]?.value : 0,
-    bscValue: sumsBsc[4]?.value ? sumsBsc[4]?.value : 0,
+    ethValue: ethLength ? sumsEth[4]?.value : 0,
+    bscValue: bscLength ? sumsBsc[4]?.value : 0,
   };
 };
 

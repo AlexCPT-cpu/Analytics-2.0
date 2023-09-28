@@ -35,20 +35,20 @@ const Page = () => {
           address: userId,
         });
 
-        setEthPrices(returnedData.ethData.ethPrices);
-        setBscPrices(returnedData.bscData.bnbData);
+        setEthPrices(returnedData?.ethData?.ethPrices);
+        setBscPrices(returnedData?.bscData?.bnbData);
 
         const dataX = formatApiData(
-          returnedData?.ethData.ethData,
-          returnedData?.bscData.bscData,
-          returnedData.ethData.ethPrices,
-          returnedData.bscData.bnbData
+          returnedData?.ethData?.ethData,
+          returnedData?.bscData?.bscData,
+          returnedData?.ethData?.ethPrices,
+          returnedData?.bscData?.bnbData
         );
 
-        setApiData(dataX.ethData);
-        setBscFiltered(dataX.bscData);
-        setFulldata(returnedData.ethData);
-        setBscData(returnedData.bscData);
+        setApiData(dataX?.ethData);
+        setBscFiltered(dataX?.bscData);
+        setFulldata(returnedData?.ethData);
+        setBscData(returnedData?.bscData);
         setLoading(false);
         setAllData(returnedData);
       } catch (error) {
@@ -102,8 +102,8 @@ const Page = () => {
   //       console.log('Call Started');
   //       const res = await axios.post('/api/reserve', {
   //         tokens: { ethTokens: eth, bscTokens: bsc },
-  //         address: userId,
-  //         tier: '1W',
+  //         address: '0x6d3d490964205c8bc8ded39e48e88e8fde45b41f',
+  //         tier: '1H',
   //       });
 
   //       console.log(res);

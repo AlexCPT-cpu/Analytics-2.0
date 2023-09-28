@@ -48,7 +48,7 @@ const UserTab = ({ userId }) => {
 
   const eth = useMemo(
     () =>
-      allData?.ethData.ethData.map((address) => ({
+      allData?.ethData?.ethData?.map((address) => ({
         address: address.token_address,
         decimal: address.decimals,
         pair: {
@@ -63,7 +63,7 @@ const UserTab = ({ userId }) => {
 
   const bsc = useMemo(
     () =>
-      allData?.bscData.bscData.map((address) => ({
+      allData?.bscData?.bscData?.map((address) => ({
         address: address.token_address,
         decimal: address.decimals,
         pair: {
@@ -147,46 +147,31 @@ const UserTab = ({ userId }) => {
     };
   }
 
-  const nowPrices = apiData.reduce((accumulator, item) => {
+  const nowPrices = apiData?.reduce((accumulator, item) => {
     return accumulator + item?.nowPriceBal;
   }, 0);
-  const hourPrices = apiData.reduce((accumulator, item) => accumulator + item?.hourPriceBal, 0);
-  // const dayPrices = apiData.reduce((accumulator, item) => accumulator + item?.dayPriceBal, 0);
-  // const weekPrices = apiData.reduce((accumulator, item) => accumulator + item?.weekPriceBal, 0);
-  // const monthPrices = apiData.reduce((accumulator, item) => accumulator + item?.monthPriceBal, 0);
+  const hourPrices = apiData?.reduce((accumulator, item) => accumulator + item?.hourPriceBal, 0);
 
-  const bscNowPrices = bscFiltered.reduce(
+  const bscNowPrices = bscFiltered?.reduce(
     (accumulator, item) => accumulator + item?.nowPriceBal,
     0
   );
-  const bscHourPrices = bscFiltered.reduce(
+  const bscHourPrices = bscFiltered?.reduce(
     (accumulator, item) => accumulator + item?.hourPriceBal,
     0
   );
-  // const bscDayPrices = bscFiltered.reduce(
-  //   (accumulator, item) => accumulator + item?.dayPriceBal,
-  //   0
-  // );
-  // const bscWeekPrices = bscFiltered.reduce(
-  //   (accumulator, item) => accumulator + item?.weekPriceBal,
-  //   0
-  // );
-  // const bscMonthPrices = bscFiltered.reduce(
-  //   (accumulator, item) => accumulator + item?.monthPriceBal,
-  //   0
-  // );
   const [ethDuration, setEthDuration] = useState(
-    (hourPrices + fullData.ethBalances.balances.balances[0]) * ethPrices.eth_Price1H
+    (hourPrices + fullData?.ethBalances?.balances?.balances[0]) * ethPrices.eth_Price1H
   );
 
   const [ethNowBalance, setEthNowBalance] = useState(
-    (nowPrices + fullData.ethBalances.balanceNow) * ethPrices.eth_PriceNow
+    (nowPrices + fullData?.ethBalances?.balanceNow) * ethPrices.eth_PriceNow
   );
   const [bscDuration, setBscDuration] = useState(
-    (bscHourPrices + bscData.bscBalances.balances.balances[0]) * bscPrices.bnb_Price1H
+    (bscHourPrices + bscData?.bscBalances?.balances?.balances[0]) * bscPrices.bnb_Price1H
   );
   const [bscNowBalance, setBscNowBalance] = useState(
-    (bscNowPrices + bscData.bscBalances.balanceNow) * bscPrices.bnb_PriceNow
+    (bscNowPrices + bscData?.bscBalances?.balanceNow) * bscPrices.bnb_PriceNow
   );
   const [nowBalance, setNowBalance] = useState(ethNowBalance + bscNowBalance);
 
@@ -196,9 +181,9 @@ const UserTab = ({ userId }) => {
   );
 
   const calculations = {
-    profitLoss: ethCalculations.profitLoss,
-    priceDiffrence: ethCalculations.priceDifference,
-    percentageChange: ethCalculations.percentageChange,
+    profitLoss: ethCalculations?.profitLoss,
+    priceDiffrence: ethCalculations?.priceDifference,
+    percentageChange: ethCalculations?.percentageChange,
   };
 
   const select = useCallback(
