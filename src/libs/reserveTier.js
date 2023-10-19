@@ -1,5 +1,5 @@
 import { kv } from '@vercel/kv';
-import { ethProvider, ankrRpc } from 'src/config/index';
+import { ethProvider, ankrRpc, nodeRealKeys, alchemyUrl } from 'src/config/index';
 import Web3 from 'web3';
 import { ethPrice } from 'src/lib/chats/eth/prices';
 import { bscPrice } from 'src/lib/chats/bsc/pricesbsc';
@@ -8,6 +8,8 @@ import ethBlock from 'src/libs/ethBlock';
 import getHistoryBsc from 'src/libs/getHistoryBsc';
 import getHistoryBscV3 from 'src/libs/getHistoryBscV3';
 import getBalances from 'src/lib/moralis/getBalances';
+import getHistoryEth2 from './getHistoryEth2';
+import getHistoryEth23 from './getHistoryEth23';
 
 const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
   try {
@@ -31,58 +33,57 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
       const eth_Price1 = await ethPrice(timing[2]);
 
       const tokensArr = [bscTokens, ethTokens];
+      const bscArry = [...nodeRealKeys];
+      const ethArry = [ethProvider, alchemyUrl];
 
       const ultimate = await Promise.all(
         tokensArr.map(async (tokenAr, index) => {
           if (index === 0) {
             const bscArr = await Promise.all(
               tokenAr.map(async (token) => {
-                if (token.pair.exchange == 'PancakeV2') {
+                if (token.exchange == 'PancakeV2') {
                   const pair = await Promise.all(
-                    blocksBsc.map(async (block) => {
+                    blocksBsc.map(async (block, index) => {
                       try {
                         const pairData = await getHistoryBsc(
                           token.address,
-                          web3Bsc,
                           address,
-                          token.pair.pair,
                           block,
                           token.maxReserve,
-                          token
+                          parseInt(token.decimals),
+                          index
                         );
                         return {
                           address: token.address,
                           decimals: token.decimal,
-                          pair: token.pair,
                           reserves: pairData,
                         };
                       } catch (error) {
-                        console.log(error);
+                        console.log('Cake V2 Error');
                       }
                     })
                   );
                   return pair;
-                } else if (token.pair.exchange == 'PancakeV3') {
+                } else if (token.exchange == 'PancakeV3') {
                   const pair = await Promise.all(
-                    blocksBsc.map(async (block) => {
+                    blocksBsc.map(async (block, index) => {
                       try {
                         const pairData = await getHistoryBscV3(
                           token.address,
-                          web3Bsc,
                           address,
-                          token.pair.pair,
                           block,
                           token.maxReserve,
-                          token
+                          parseInt(token.fee),
+                          parseInt(token.decimals),
+                          index
                         );
                         return {
                           address: token.address,
                           decimals: token.decimal,
-                          pair: token.pair,
                           reserves: pairData,
                         };
                       } catch (error) {
-                        console.log(error);
+                        console.log('Cake V3 Error');
                       }
                     })
                   );
@@ -94,23 +95,21 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
           } else {
             const ethArr = await Promise.all(
               tokenAr.map(async (token) => {
-                if (token.pair.exchange === 'UniswapV2') {
+                if (token.exchange === 'UniswapV2') {
                   const pair = await Promise.all(
-                    blocksEth.map(async (block) => {
+                    blocksEth.map(async (block, index) => {
                       try {
-                        const pairData = await getHistoryBsc(
+                        const pairData = await getHistoryEth2(
                           token.address,
-                          web3Eth,
                           address,
-                          token.pair.pair,
                           block,
                           token.maxReserve,
-                          token
+                          parseInt(token.decimals),
+                          index
                         );
                         return {
                           address: token.address,
                           decimals: token.decimal,
-                          pair: token.pair,
                           reserves: pairData,
                         };
                       } catch (error) {
@@ -119,23 +118,22 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
                     })
                   );
                   return pair;
-                } else if (token.pair.exchange === 'UniswapV3') {
+                } else if (token.exchange === 'UniswapV3') {
                   const pair = await Promise.all(
-                    blocksEth.map(async (block) => {
+                    blocksEth.map(async (block, index) => {
                       try {
-                        const pairData = await getHistoryBscV3(
+                        const pairData = await getHistoryEth23(
                           token.address,
-                          web3Eth,
                           address,
-                          token.pair.pair,
                           block,
                           token.maxReserve,
-                          token
+                          parseInt(token.fee),
+                          parseInt(token.decimals),
+                          index
                         );
                         return {
                           address: token.address,
                           decimals: token.decimal,
-                          pair: token.pair,
                           reserves: pairData,
                         };
                       } catch (error) {
@@ -155,9 +153,9 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
       const bnb_Price2 = await bscPrice(timing[3]);
 
       const eth_Price2 = await ethPrice(timing[3]);
-      const bscBalance = await getBalances(address, web3Bsc, blocksBsc);
+      const bscBalance = await getBalances(address, bscArry, blocksBsc);
       const bnb_Price3 = await bscPrice(timing[4]);
-      const ethBalance = await getBalances(address, web3Eth, blocksEth);
+      const ethBalance = await getBalances(address, ethArry, blocksEth);
       const eth_Price3 = await ethPrice(timing[4]);
 
       const bscData = {

@@ -1,7 +1,7 @@
-import axios from 'axios';
-import { factoryV2, moralisKey } from 'src/config/index';
-import { CircularReplacer, Stringify } from 'src/helpers/CircularReplacer';
+import { factoryV2 } from 'src/config/index';
 import UniswapV2Abi from 'src/json/factoryV2Abi.json';
+import { FeeAmount } from '@uniswap/v3-sdk';
+import getV3Pair from 'src/libs/getV3Pair';
 
 const v2 = async (token0Address, token1Address, web3) => {
   try {
@@ -12,48 +12,33 @@ const v2 = async (token0Address, token1Address, web3) => {
     console.log(error.message, 'no pair');
   }
 };
-
-const v3 = async (token0Address, token1Address) => {
-  try {
-    // const response = await Moralis.EvmApi.defi.getPairAddress({
-    //   token0Address,
-    //   token1Address,
-    //   chain,
-    //   exchange: 'uniswapv3',
-    // });
-    const url = `https://deep-index.moralis.io/api/v2/${token0Address}/${token1Address}/pairAddress?chain=eth&exchange=uniswapv3`;
-
-    const x = await axios.get(url, {
-      headers: {
-        Accept: 'application/json',
-        'X-API-Key': moralisKey,
-      },
-    });
-
-    const obj = Stringify(x?.data, CircularReplacer);
-    if (obj.pairAddress) {
-      return obj;
+const v3 = async (token0Address, token1Address, decimal0, decimal1) => {
+  const feeTiers = [FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH];
+  for (const feeTier of feeTiers) {
+    try {
+      const pair = await getV3Pair(token0Address, token1Address, decimal0, decimal1, feeTier);
+      console.log(pair, feeTier);
+      if (pair && pair !== '0x0000000000000000000000000000000000000000') {
+        return { pair: pair, fee: parseInt(feeTier) };
+      }
+    } catch (error) {
+      console.error(`Error fetching V3 Pool`, error.message);
     }
-    return obj;
-  } catch (error) {
-    //console.log(error.message);
   }
+  return null;
 };
-const getReserves = async (token0Address, token1Address, web3) => {
-  const v2Pair = await v2(token0Address, token1Address, web3);
-  if (v2Pair && v2Pair != '0x0000000000000000000000000000000000000000') {
-    return { pair: v2Pair, exchange: 'UniswapV2', isAvail: true };
+const getReserves = async (token0Address, token1Address, decimal0, decimal1, web3) => {
+  const v3Pair = await v3(token0Address, token1Address, decimal0, decimal1);
+  if (v3Pair && v3Pair !== null && v3Pair.pair != '0x0000000000000000000000000000000000000000') {
+    console.log('return v3');
+    console.log({ pair: v3Pair.pair, fee: v3Pair.fee, exchange: 'UniswapV3', isAvail: true });
+    return { pair: v3Pair.pair, fee: v3Pair.fee, exchange: 'UniswapV3', isAvail: true };
   } else {
-    const pair = await v3(token0Address, token1Address);
-
-    if (pair && pair !== '0x0000000000000000000000000000000000000000') {
-      return { pair: pair.pairAddress, exchange: 'UniswapV3', isAvail: true };
-    } else {
-      const pair2 = await v3(token1Address, token0Address);
-      if (pair2 && pair2 !== '0x0000000000000000000000000000000000000000') {
-        return { pair: pair2.pairAddress, exchange: 'UniswapV3', isAvail: true };
-      } else return { isAvail: false };
-    }
+    console.log('checking v2');
+    const v2Pair = await v2(token0Address, token1Address, web3);
+    if (v2Pair && v2Pair != '0x0000000000000000000000000000000000000000') {
+      return { pair: v2Pair, exchange: 'UniswapV2', isAvail: true };
+    } else return null;
   }
 };
 

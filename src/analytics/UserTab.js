@@ -6,7 +6,7 @@ import { GroupedList } from './GroupedList';
 import { AssetsTable } from './AssetsTable';
 import { useTheme } from '@mui/material/styles';
 import { AnalyticsConsumer } from 'src/contexts/AnalyticsContext';
-//import tier from 'src/tier.json';
+import tier from 'src/tier.json';
 import formatTier from 'src/libs/formatTier';
 import axios from 'axios';
 
@@ -28,6 +28,10 @@ const UserTab = ({ userId }) => {
     {
       variant: 'outlined',
       text: '1M',
+    },
+    {
+      variant: 'outlined',
+      text: '1Y',
     },
   ]);
   const [loading, setLoading] = useState(true);
@@ -156,6 +160,7 @@ const UserTab = ({ userId }) => {
     (accumulator, item) => accumulator + item?.nowPriceBal,
     0
   );
+
   const bscHourPrices = bscFiltered?.reduce(
     (accumulator, item) => accumulator + item?.hourPriceBal,
     0
@@ -173,6 +178,7 @@ const UserTab = ({ userId }) => {
   const [bscNowBalance, setBscNowBalance] = useState(
     (bscNowPrices + bscData?.bscBalances?.balanceNow) * bscPrices.bnb_PriceNow
   );
+
   const [nowBalance, setNowBalance] = useState(ethNowBalance + bscNowBalance);
 
   const ethCalculations = calculateProfitLoss(
@@ -212,6 +218,10 @@ const UserTab = ({ userId }) => {
               variant: 'outlined',
               text: '1M',
             },
+            {
+              variant: 'outlined',
+              text: '1Y',
+            },
           ]);
           setDuratia('1H');
           const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
@@ -248,6 +258,10 @@ const UserTab = ({ userId }) => {
               variant: 'outlined',
               text: '1M',
             },
+            {
+              variant: 'outlined',
+              text: '1Y',
+            },
           ]);
           setDuratia('1D');
           const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
@@ -283,6 +297,10 @@ const UserTab = ({ userId }) => {
             {
               variant: 'outlined',
               text: '1M',
+            },
+            {
+              variant: 'outlined',
+              text: '1Y',
             },
           ]);
           setDuratia('1W');
@@ -321,8 +339,53 @@ const UserTab = ({ userId }) => {
               variant: 'contained',
               text: '1M',
             },
+            {
+              variant: 'outlined',
+              text: '1Y',
+            },
           ]);
           setDuratia('1M');
+          const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
+          setEthDuration(ethValue);
+          setBscDuration(bscValue);
+          setChartArr(tier0);
+        } catch (error) {
+          console.log(error);
+        } finally {
+          setLoading(false);
+        }
+      } else if (selector.text === '1Y') {
+        try {
+          setLoading(true);
+          const { data } = await axios.post('/api/reserve', {
+            tokens: { ethTokens: eth, bscTokens: bsc },
+            address: userId,
+            tier: '1Y',
+          });
+
+          setbuttons([
+            {
+              variant: 'outlined',
+              text: '1H',
+            },
+            {
+              variant: 'outlined',
+              text: '1D',
+            },
+            {
+              variant: 'outlined',
+              text: '1W',
+            },
+            {
+              variant: 'outlined',
+              text: '1M',
+            },
+            {
+              variant: 'contained',
+              text: '1Y',
+            },
+          ]);
+          setDuratia('1Y');
           const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
           setEthDuration(ethValue);
           setBscDuration(bscValue);
@@ -357,6 +420,10 @@ const UserTab = ({ userId }) => {
               variant: 'outlined',
               text: '1M',
             },
+            {
+              variant: 'outlined',
+              text: '1Y',
+            },
           ]);
           setDuratia('1H');
           const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
@@ -377,11 +444,12 @@ const UserTab = ({ userId }) => {
     const getReserve = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.post('/api/reserve', {
-          tokens: { ethTokens: eth, bscTokens: bsc },
-          address: userId,
-          tier: '1H',
-        });
+        // const { data } = await axios.post('/api/reserve', {
+        //   tokens: { ethTokens: eth, bscTokens: bsc },
+        //   address: userId,
+        //   tier: '1H',
+        // });
+        //console.log(data);
         setbuttons([
           {
             variant: 'contained',
@@ -399,9 +467,13 @@ const UserTab = ({ userId }) => {
             variant: 'outlined',
             text: '1M',
           },
+          {
+            variant: 'outlined',
+            text: '1Y',
+          },
         ]);
         setDuratia('1H');
-        const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
+        const { tier0, ethValue, bscValue } = formatTier(tier, allData, bscData);
         setEthDuration(ethValue);
         setBscDuration(bscValue);
         setChartArr(tier0);

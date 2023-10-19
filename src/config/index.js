@@ -1,7 +1,7 @@
 export const UniswapV2 = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D';
 export const UniswapV3 = '0xE592427A0AEce92De3Edee1F18E0157C05861564';
 export const oneInchV5 = '0x1111111254eeb25477b68fb85ed929f73a960582';
-export const PancakeswapV2 = '';
+export const PancakeswapV2 = '0x10ED43C718714eb63d5aA57B78B54704E256024E';
 export const PancakeswapV3 = '';
 export const oneInchV5Bsc = '0x1111111254eeb25477b68fb85ed929f73a960582';
 export const WETH = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2';
@@ -14,26 +14,33 @@ export const endpoint = 'http://localhost:5050/';
 
 export const etherscanApi = 'https://api.etherscan.io/';
 
-export const etherscanApiKey = process.env.etherscanApiKey;
-export const etherscanKey1 = process.env.etherscanKey1;
-export const etherscanKey2 = process.env.etherscanKey2;
-export const etherscanKey3 = process.env.etherscanKey3;
-export const alchemyKey = process.env.alchemyKey;
-export const bscscanApiKey = process.env.bscscanApiKey;
-export const bscscanKey1 = process.env.bscscanKey1;
-export const bscscanKey2 = process.env.bscscanKey2;
-export const bscscanKey3 = process.env.bscscanKey3;
-export const moralisKey = process.env.moralisKey;
-export const redisUrl = process.env.redisUrl;
-export const redisPassword = process.env.redisPassword;
-export const ethProvider = process.env.ethProvider;
-export const bearerToken = process.env.bearerToken;
+export const etherscanApiKey = process.env.NEXT_PUBLIC_etherscanApiKey;
+export const etherscanKey1 = process.env.NEXT_PUBLIC_etherscanKey1;
+export const etherscanKey2 = process.env.NEXT_PUBLIC_etherscanKey2;
+export const etherscanKey3 = process.env.NEXT_PUBLIC_etherscanKey3;
+export const alchemyKey = process.env.NEXT_PUBLIC_alchemyKey;
+export const bscscanApiKey = process.env.NEXT_PUBLIC_bscscanApiKey;
+export const bscscanKey1 = process.env.NEXT_PUBLIC_bscscanKey1;
+export const bscscanKey2 = process.env.NEXT_PUBLIC_bscscanKey2;
+export const bscscanKey3 = process.env.NEXT_PUBLIC_bscscanKey3;
+export const moralisKey = process.env.NEXT_PUBLIC_moralisKey;
+export const redisUrl = process.env.NEXT_PUBLIC_redisUrl;
+export const redisPassword = process.env.NEXT_PUBLIC_redisPassword;
+export const ethProvider = process.env.NEXT_PUBLIC_ethProvider;
+export const bearerToken = process.env.NEXT_PUBLIC_bearerToken;
 export const ankrRpc = 'https://rpc.ankr.com/bsc';
-export const nodeRealEth = process.env.nodeRealEth;
-export const nodeRealBsc = process.env.nodeRealBsc;
-
-export const bscProvider = process.env.bscProvider2;
-export const bscProvider2 = 'https://bsc-dataseed2.binance.org/';
+export const nodeRealEth = process.env.NEXT_PUBLIC_nodeRealEth;
+export const nodeRealBsc = process.env.NEXT_PUBLIC_nodeRealBsc;
+export const alchemyUrl = process.env.NEXT_PUBLIC_ALCHEMY_URL;
+export const bscProvider = process.env.NEXT_PUBLIC_bscProvider2;
+export const nodeRealKeys = [
+  'https://1rpc.io/bnb',
+  process.env.NEXT_NODEREAL1,
+  process.env.NEXT_NODEREAL2,
+  process.env.NEXT_NODEREAL3,
+];
+export const bscProvider2 =
+  'https://bsc-mainnet.core.chainstack.com/35e21f1c0642238f549d179b15b5ddda'; //'https://1rpc.io/bnb';
 
 export const bscProviderArr = [
   'https://bsc-dataseed1.defibit.io/',

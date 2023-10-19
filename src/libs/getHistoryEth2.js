@@ -1,16 +1,17 @@
-import { nodeRealKeys } from 'src/config/index';
-import { getV2PriceTimeBsc } from 'src/lib/getV2PriceBsc';
-import fetchBalance from 'src/lib/moralis/bsc/fetchBalance';
+import { ethProvider, alchemyUrl } from 'src/config/index';
+import { getV2PriceTime } from 'src/lib/getV2Price';
+import fetchBalance from 'src/lib/moralis/eth/fetchBalance';
 import Web3 from 'web3';
 
-const getHistoryBsc = async (tokenAddress, userAddress, block, maxReserve, decimals, i) => {
-  const index = i % 4;
-  const provider = nodeRealKeys[index];
+const getHistoryEth2 = async (tokenAddress, userAddress, block, maxReserve, decimals, i) => {
+  const index = i % 2;
+  const arr = [alchemyUrl, ethProvider];
+  const provider = arr[index];
   const web3 = new Web3(provider);
 
   try {
     const balanceTime = await fetchBalance(tokenAddress, userAddress, parseInt(block.block), web3);
-    const ethPrice = await getV2PriceTimeBsc(
+    const ethPrice = await getV2PriceTime(
       tokenAddress,
       provider,
       parseInt(decimals),
@@ -29,4 +30,4 @@ const getHistoryBsc = async (tokenAddress, userAddress, block, maxReserve, decim
   }
 };
 
-export default getHistoryBsc;
+export default getHistoryEth2;

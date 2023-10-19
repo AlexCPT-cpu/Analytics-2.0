@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { AnalyticsConsumer } from 'src/contexts/AnalyticsContext';
-//import returnedData from '../../response.json';
+import returnedData from '../../response.json';
 import formatApiData from 'src/lib/formatApiData';
 import PortfolioLayout from 'src/analytics/PortfolioLayout';
 import UserTab from 'src/analytics/UserTab';
@@ -31,9 +31,9 @@ const Page = () => {
     const setData = async () => {
       try {
         setLoading(true);
-        const { data: returnedData } = await axios.post('/api/analysis', {
-          address: userId,
-        });
+        // const { data: returnedData } = await axios.post('/api/analysis', {
+        //   address: userId,
+        // });
 
         setEthPrices(returnedData?.ethData?.ethPrices);
         setBscPrices(returnedData?.bscData?.bnbData);
@@ -102,7 +102,7 @@ const Page = () => {
   //       console.log('Call Started');
   //       const res = await axios.post('/api/reserve', {
   //         tokens: { ethTokens: eth, bscTokens: bsc },
-  //         address: '0x6d3d490964205c8bc8ded39e48e88e8fde45b41f',
+  //         address: '0xefd01453be7b725AB3fc57D5D280FDc46609F253',
   //         tier: '1H',
   //       });
 
@@ -118,7 +118,7 @@ const Page = () => {
 
   useEffect(() => {
     if (error) {
-      router.push('/500');
+      router.push('/error');
     }
   }, [error, router]);
 

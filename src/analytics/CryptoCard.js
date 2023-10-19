@@ -144,6 +144,8 @@ export const CryptoCard = (props) => {
         setChartData(chartArr);
       } else if (duratia === '1M') {
         setChartData(chartArr);
+      } else if (duratia === '1Y') {
+        setChartData(chartArr);
       } else {
         setChartData(chartArr);
       }

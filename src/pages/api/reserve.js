@@ -62,6 +62,20 @@ export default async function handler(req, res) {
             `an error occured while trying to get the wallet portfolio/details: ${error?.message}`
           );
       }
+    } else if (tier === '1Y') {
+      try {
+        const bscTokens = tokens.bscTokens;
+        const ethTokens = tokens.ethTokens;
+        const timing = intervals[4];
+        const data = await reserveTier(address, '/history/1Y', timing, bscTokens, ethTokens);
+        res.status(200).json(data);
+      } catch (error) {
+        res
+          .status(500)
+          .send(
+            `an error occured while trying to get the wallet portfolio/details: ${error?.message}`
+          );
+      }
     } else {
       res.status(400).send('invalid tier');
     }

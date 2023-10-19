@@ -1,84 +1,72 @@
-import PairAbiV3 from 'src/json/pancakePairV3.json';
-import { getBalance, getNowBalance } from 'src/lib/getBalance';
+import erc20Abi from 'src/json/erc20Abi.json';
+import { userBalance } from './userBalance';
+import { nodeRealKeys } from 'src/config/index';
+import Web3 from 'web3';
+import { getV3PriceTimeBsc } from 'src/lib/getV3PriceBsc';
 import fetchBalance from './fetchBalance';
-import getSerialisedV3data from '../eth/getSerialisedV3data';
-import fetchPairs from './fetchPairs';
 
-const getHistoryBscV3 = async (tokenAddress, web3, userAddress, pair, blocks) => {
-  const prs = await fetchPairs(pair);
-  const contract = new web3.eth.Contract(pair, PairAbiV3);
-  const contract1 = new web3.eth.Contract(tokenAddress, erc20Abi);
-  const contract0 = new web3.eth.Contract(WETH, erc20Abi);
-  const createdHash = prs?.result[0].txHash;
-  const tokenContract = new web3.eth.Contract(erc20Abi, tokenAddress);
-  if (createdHash) {
-    const transaction = await web3.eth.getTransaction(createdHash);
-    const blockThen = await web3.eth.getBlock(parseInt(transaction.blockNumber));
+const getHistoryBscV3 = async (tokenAddress, web3, userAddress, blocks, i, decimals, ethData) => {
+  try {
+    const tokenContract = new web3.eth.Contract(erc20Abi, tokenAddress);
 
-    const token0 = await contract.methods.token0().call();
-    const token1 = await contract.methods.token1().call();
+    const balanceNow = await userBalance(tokenContract, userAddress);
+    if (balanceNow !== null) {
+      const index = i % 4;
+      const provider = nodeRealKeys[index];
+      const web3Time = new Web3(provider);
 
-    const reserveThen = await getBalance(
-      pair,
-      contract0,
-      contract1,
-      parseInt(transaction.blockNumber)
-    );
-    const reserveNow = await getNowBalance(contract, contract0, contract1);
+      if (ethData !== null) {
+        const resultThen = {
+          ethPrice: 0,
+          balance: 0,
+          block: { timestamp: 0, number: 0 },
+          fee: 0,
+        };
+        const resultNow = {
+          ethPrice: parseInt(ethData.ethPrice),
+          balance: parseInt(balanceNow),
+          fee: parseInt(ethData.fee),
+        };
 
-    const balanceThen = await fetchBalance(
-      tokenAddress,
-      userAddress,
-      parseInt(transaction.blockNumber),
-      web3
-    );
-    const balanceNow = await tokenContract.methods.balanceOf(userAddress).call();
+        const balancesFetcher = blocks.map(async (block) => {
+          try {
+            const balanceTime = await fetchBalance(
+              tokenAddress,
+              userAddress,
+              parseInt(block.block),
+              web3Time
+            );
+            const priceTime = await getV3PriceTimeBsc(
+              tokenAddress,
+              provider,
+              decimals,
+              ethData.fee,
+              parseInt(block.block)
+            );
 
-    const tokenDetails = {
-      token0,
-      token1,
-    };
-    const resultThen = {
-      reserve0: reserveThen[0],
-      reserve1: reserveThen[1],
-      balance: balanceThen,
-    };
-    const resultNow = {
-      reserve0: reserveNow[0],
-      reserve1: reserveNow[1],
-      balance: balanceNow,
-    };
-    const balancesFetcher = blocks.map(async (block) => {
-      try {
-        if (parseInt(blockThen?.timestamp) < block.timestamp) {
-          const resultTime = await getSerialisedV3data(
-            tokenAddress,
-            userAddress,
-            pair,
-            token0,
-            token1,
-            web3,
-            parseInt(block.block)
-          );
+            return {
+              ethPrice: priceTime,
+              fee: ethData.fee,
+              block,
+              balance: balanceTime,
+            };
+          } catch (error) {
+            return resultThen;
+          }
+        });
+        const dates = await Promise.all(balancesFetcher);
 
-          return resultTime;
-        } else {
-          return resultThen;
-        }
-      } catch (error) {
-        console.log(error);
+        return [
+          {
+            maxReserve: resultThen,
+            nowReserve: resultNow,
+            dates,
+          },
+        ];
       }
-    });
-    const dates = await Promise.all(balancesFetcher);
-
-    return [
-      {
-        maxReserve: resultThen,
-        nowReserve: resultNow,
-        dates,
-      },
-      tokenDetails,
-    ];
+    } else return null;
+  } catch (error) {
+    console.log('bsc v3 reserve error');
   }
 };
 

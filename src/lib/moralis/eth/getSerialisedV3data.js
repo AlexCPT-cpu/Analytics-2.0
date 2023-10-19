@@ -1,5 +1,4 @@
-import fetchBalance from "./fetchBalance";
-import formatDate from "../../formatDate";
+import fetchBalance from './fetchBalance';
 
 const getSerialisedV3data = async (
   tokenAddress,
@@ -8,38 +7,18 @@ const getSerialisedV3data = async (
   token0,
   token1,
   web3,
-  block,
-  token,
-  timestamp
+  block
 ) => {
-  const balanceTime = await fetchBalance(
-    tokenAddress,
-    userAddress,
-    parseInt(block),
-    web3
-  );
+  const balanceTime = await fetchBalance(tokenAddress, userAddress, parseInt(block), web3);
 
-  const reserve0 = await fetchBalance(
-    token0,
-    pairAddress,
-    parseInt(block),
-    web3
-  );
+  const reserve0 = await fetchBalance(token0, pairAddress, parseInt(block), web3);
 
-  const reserve1 = await fetchBalance(
-    token1,
-    pairAddress,
-    parseInt(block),
-    web3
-  );
-  const times = formatDate(new Date(Math.floor(parseInt(timestamp) * 1000)));
+  const reserve1 = await fetchBalance(token1, pairAddress, parseInt(block), web3);
+
   return {
-    reserve0: reserve0,
-    reserve1: reserve1,
-    balance: balanceTime,
-    pair: token.pair,
-    decimal: token.decimal,
-    time: times,
+    reserve0: parseInt(reserve0),
+    reserve1: parseInt(reserve1),
+    balance: parseInt(balanceTime),
   };
 };
 

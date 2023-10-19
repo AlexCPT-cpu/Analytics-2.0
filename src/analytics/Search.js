@@ -10,6 +10,7 @@ import { usePageView } from 'src/hooks/use-page-view';
 import { useRouter } from 'next/router';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
+import validateAddress from 'src/libs/validateAddress';
 
 const Search = () => {
   const router = useRouter();
@@ -20,7 +21,8 @@ const Search = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (value.startsWith('0x')) {
+    const validation = validateAddress(value);
+    if (validation) {
       router.push(`/address/${value}`);
       setValue('');
       console.log('passed');
@@ -32,7 +34,7 @@ const Search = () => {
 
   return (
     <div>
-      <Tip message="Enter a valid cryptocurrency wallet address and press Enter" />
+      <Tip message="Enter a valid evm wallet address and press Enter" />
       <Box
         component="form"
         onSubmit={handleSubmit}
@@ -57,7 +59,7 @@ const Search = () => {
         {error ? (
           <Alert severity="error">
             <AlertTitle>Error</AlertTitle>
-            The address format entered is not recognized — <strong>Please try again!</strong>
+            The address entered is not evm compatible — <strong>Please try again!</strong>
           </Alert>
         ) : null}
       </Box>
