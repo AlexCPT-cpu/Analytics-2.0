@@ -59,94 +59,97 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
                           reserves: pairData,
                         };
                       } catch (error) {
-                        console.log('Cake V2 Error');
-                      }
-                    })
-                  );
-                  return pair;
-                } else if (token.exchange == 'PancakeV3') {
-                  const pair = await Promise.all(
-                    blocksBsc.map(async (block, index) => {
-                      try {
-                        const pairData = await getHistoryBscV3(
-                          token.address,
-                          address,
-                          block,
-                          token.maxReserve,
-                          parseInt(token.fee),
-                          parseInt(token.decimals),
-                          index
-                        );
-                        return {
-                          address: token.address,
-                          decimals: token.decimal,
-                          reserves: pairData,
-                        };
-                      } catch (error) {
-                        console.log('Cake V3 Error');
+                        console.log('Cake V2 Error', error);
                       }
                     })
                   );
                   return pair;
                 }
+                // else if (token.exchange == 'PancakeV3') {
+                //   const pair = await Promise.all(
+                //     blocksBsc.map(async (block, index) => {
+                //       try {
+                //         const pairData = await getHistoryBscV3(
+                //           token.address,
+                //           address,
+                //           block,
+                //           token.maxReserve,
+                //           parseInt(token.fee),
+                //           parseInt(token.decimals),
+                //           index
+                //         );
+                //         return {
+                //           address: token.address,
+                //           decimals: token.decimal,
+                //           reserves: pairData,
+                //         };
+                //       } catch (error) {
+                //         console.log('Cake V3 Error', error);
+                //       }
+                //     })
+                //   );
+                //   return pair;
+                // }
               })
             );
             return bscArr;
-          } else {
-            const ethArr = await Promise.all(
-              tokenAr.map(async (token) => {
-                if (token.exchange === 'UniswapV2') {
-                  const pair = await Promise.all(
-                    blocksEth.map(async (block, index) => {
-                      try {
-                        const pairData = await getHistoryEth2(
-                          token.address,
-                          address,
-                          block,
-                          token.maxReserve,
-                          parseInt(token.decimals),
-                          index
-                        );
-                        return {
-                          address: token.address,
-                          decimals: token.decimal,
-                          reserves: pairData,
-                        };
-                      } catch (error) {
-                        console.log(error);
-                      }
-                    })
-                  );
-                  return pair;
-                } else if (token.exchange === 'UniswapV3') {
-                  const pair = await Promise.all(
-                    blocksEth.map(async (block, index) => {
-                      try {
-                        const pairData = await getHistoryEth23(
-                          token.address,
-                          address,
-                          block,
-                          token.maxReserve,
-                          parseInt(token.fee),
-                          parseInt(token.decimals),
-                          index
-                        );
-                        return {
-                          address: token.address,
-                          decimals: token.decimal,
-                          reserves: pairData,
-                        };
-                      } catch (error) {
-                        console.log(error);
-                      }
-                    })
-                  );
-                  return pair;
-                }
-              })
-            );
-            return ethArr;
           }
+          // else {
+          //   const ethArr = await Promise.all(
+          //     tokenAr.map(async (token) => {
+          //       if (token.exchange === 'UniswapV2') {
+          //         const pair = await Promise.all(
+          //           blocksEth.map(async (block, index) => {
+          //             try {
+          //               const pairData = await getHistoryEth2(
+          //                 token.address,
+          //                 address,
+          //                 block,
+          //                 token.maxReserve,
+          //                 parseInt(token.decimals),
+          //                 index
+          //               );
+          //               return {
+          //                 address: token.address,
+          //                 decimals: token.decimal,
+          //                 reserves: pairData,
+          //               };
+          //             } catch (error) {
+          //               console.log(error, 'Uni V2 Error');
+          //             }
+          //           })
+          //         );
+          //         return pair;
+          //       }
+          //       else if (token.exchange === 'UniswapV3') {
+          //         const pair = await Promise.all(
+          //           blocksEth.map(async (block, index) => {
+          //             try {
+          //               const pairData = await getHistoryEth23(
+          //                 token.address,
+          //                 address,
+          //                 block,
+          //                 token.maxReserve,
+          //                 parseInt(token.fee),
+          //                 parseInt(token.decimals),
+          //                 index
+          //               );
+          //               return {
+          //                 address: token.address,
+          //                 decimals: token.decimal,
+          //                 reserves: pairData,
+          //               };
+          //             } catch (error) {
+          //               console.log(error, 'Uni V3 Error');
+          //             }
+          //           })
+          //         );
+          //         return pair;
+          //       }
+          //     })
+          //   );
+          //   return ethArr;
+          // }
         })
       );
 
@@ -186,7 +189,7 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
         time: time / 1000,
         timestamp: new Date().getTime(),
       };
-      await kv.set(key, JSON.stringify(balanceData));
+      //await kv.set(key, JSON.stringify(balanceData));
       return balanceData;
     }
   } catch (error) {

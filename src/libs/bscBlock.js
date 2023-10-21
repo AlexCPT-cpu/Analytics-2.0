@@ -7,8 +7,8 @@ const bscBlock = async (timing, web3Bsc) => {
       const blockObj = await getBlockByTimestampBsc(Math.floor(time / 1000), index);
       const block = await web3Bsc.eth.getBlock(parseInt(blockObj));
       return {
-        block: parseInt(block.number),
-        timestamp: parseInt(block.timestamp),
+        block: parseInt(block?.number),
+        timestamp: parseInt(block?.timestamp),
       };
     })
   );

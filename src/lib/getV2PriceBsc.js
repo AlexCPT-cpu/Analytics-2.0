@@ -11,7 +11,11 @@ export const getV2PriceNowBsc = async (tokenAddress, prov, decimals) => {
     const data = await RouterV2.methods
       .getAmountsOut(one.toString(), [tokenAddress.toString(), bscWBNB.toString()])
       .call();
-    return parseInt(data[0]);
+    if (parseInt(data[0]) / 1e18 === parseInt(1)) {
+      return parseInt(data[1]);
+    } else {
+      return parseInt(data[0]);
+    }
   } catch (error) {
     return null;
   }
@@ -40,8 +44,13 @@ export const getV2PriceTimeBsc = async (tokenAddress, prov, decimals, block) => 
     const data = await RouterV2.methods
       .getAmountsOut(one.toString(), [tokenAddress.toString(), bscWBNB.toString()])
       .call();
-    return parseInt(data[0]);
+    if (parseInt(data[0]) / 1e18 === parseInt(1)) {
+      return parseInt(data[1]);
+    } else {
+      return parseInt(data[0]);
+    }
   } catch (error) {
+    console.log(error);
     return null;
   }
 };

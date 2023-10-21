@@ -39,6 +39,11 @@ export const nodeRealKeys = [
   process.env.NEXT_NODEREAL2,
   process.env.NEXT_NODEREAL3,
 ];
+export const nodeRealKeys2 = [
+  process.env.NEXT_NODEREAL1,
+  process.env.NEXT_NODEREAL2,
+  process.env.NEXT_NODEREAL3,
+];
 export const bscProvider2 =
   'https://bsc-mainnet.core.chainstack.com/35e21f1c0642238f549d179b15b5ddda'; //'https://1rpc.io/bnb';
 
