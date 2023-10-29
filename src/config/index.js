@@ -38,14 +38,24 @@ export const nodeRealKeys = [
   process.env.NEXT_NODEREAL1,
   process.env.NEXT_NODEREAL2,
   process.env.NEXT_NODEREAL3,
+  process.env.NEXT_NODEREAL4,
+  process.env.NEXT_NODEREAL5,
 ];
 export const nodeRealKeys2 = [
   process.env.NEXT_NODEREAL1,
   process.env.NEXT_NODEREAL2,
   process.env.NEXT_NODEREAL3,
+  process.env.NEXT_NODEREAL4,
+  process.env.NEXT_NODEREAL5,
 ];
-export const bscProvider2 =
-  'https://bsc-mainnet.core.chainstack.com/35e21f1c0642238f549d179b15b5ddda'; //'https://1rpc.io/bnb';
+export const infuraKeys = [
+  process.env.NEXT_PUBLIC_INFURA1,
+  process.env.NEXT_PUBLIC_INFURA2,
+  process.env.NEXT_PUBLIC_INFURA3,
+  ethProvider,
+];
+export const bscProvider2 = 'https://1rpc.io/bnb';
+//'https://bsc-mainnet.core.chainstack.com/35e21f1c0642238f549d179b15b5ddda';
 
 export const bscProviderArr = [
   'https://bsc-dataseed1.defibit.io/',

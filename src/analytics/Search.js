@@ -1,6 +1,5 @@
 import SearchMdIcon from '@untitled-ui/icons-react/build/esm/SearchMd';
 import Box from '@mui/material/Box';
-import CircularProgress from '@mui/material/CircularProgress';
 import InputAdornment from '@mui/material/InputAdornment';
 import SvgIcon from '@mui/material/SvgIcon';
 import TextField from '@mui/material/TextField';

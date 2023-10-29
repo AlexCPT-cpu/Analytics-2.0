@@ -50,6 +50,7 @@ export const getV2PriceTime = async (tokenAddress, prov, decimals, block) => {
       return parseInt(data[0]);
     }
   } catch (error) {
+    console.log(error);
     return null;
   }
 };

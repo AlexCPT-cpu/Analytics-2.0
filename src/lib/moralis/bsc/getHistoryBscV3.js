@@ -11,7 +11,7 @@ const getHistoryBscV3 = async (tokenAddress, web3, userAddress, blocks, i, decim
 
     const balanceNow = await userBalance(tokenContract, userAddress);
     if (balanceNow !== null) {
-      const index = i % 4;
+      const index = i % nodeRealKeys.length;
       const provider = nodeRealKeys[index];
       const web3Time = new Web3(provider);
 

@@ -1,12 +1,11 @@
-import { alchemyUrl, ethProvider } from 'src/config/index';
+import { infuraKeys } from 'src/config/index';
 import { getV3PriceTime } from 'src/lib/getV3Price';
 import fetchBalance from 'src/lib/moralis/eth/fetchBalance';
 import Web3 from 'web3';
 
-const getHistoryEth23 = async (tokenAddress, userAddress, block, maxReserve, decimals, i) => {
-  const index = i % 2;
-  const arr = [alchemyUrl, ethProvider];
-  const provider = arr[index];
+const getHistoryEth23 = async (tokenAddress, userAddress, block, maxReserve, fee, decimals, i) => {
+  const index = i % infuraKeys.length;
+  const provider = infuraKeys[index];
 
   const web3 = new Web3(provider);
 
@@ -19,7 +18,6 @@ const getHistoryEth23 = async (tokenAddress, userAddress, block, maxReserve, dec
       parseInt(fee),
       parseInt(block.block)
     );
-
     const serializedTime = {
       ethPrice,
       block,
@@ -28,6 +26,7 @@ const getHistoryEth23 = async (tokenAddress, userAddress, block, maxReserve, dec
 
     return serializedTime;
   } catch (error) {
+    console.log(error);
     return maxReserve;
   }
 };

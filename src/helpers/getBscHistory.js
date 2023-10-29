@@ -48,7 +48,7 @@ const getV2Reserves = async (tokenAddress, web3, userAddress, provider, blocks, 
 
 const getBscHistory = async (tokenAddress, web3, userAddress, blocks, decimals, i) => {
   try {
-    const index = i % 4;
+    const index = i % nodeRealKeys.length;
     const provider = nodeRealKeys[index];
     const v3Data = await getV3Reserves(
       tokenAddress,

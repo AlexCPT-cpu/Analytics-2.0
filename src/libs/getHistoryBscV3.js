@@ -4,7 +4,7 @@ import fetchBalance from 'src/lib/moralis/bsc/fetchBalance';
 import Web3 from 'web3';
 
 const getHistoryBscV3 = async (tokenAddress, userAddress, block, maxReserve, fee, decimals, i) => {
-  const index = i % 3;
+  const index = i % nodeRealKeys2.length;
   const provider = nodeRealKeys2[index];
   const web3 = new Web3(provider);
 

@@ -9,7 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import { Scrollbar } from 'src/components/scrollbar';
 import AssetItem from './AssetItem';
 import { AnalyticsConsumer } from 'src/contexts/AnalyticsContext';
-import BscItem from './BscItem ';
+import BscItem from './BscItem';
 import ChainItem from './ChainItem';
 
 export const AssetsTable = () => {

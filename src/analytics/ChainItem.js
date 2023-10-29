@@ -29,11 +29,19 @@ const EthRow = ({ data }) => {
       percentageChange = (priceDifference / oneDayAgoValue) * 100;
     }
 
-    return {
-      profitLoss,
-      priceDifference: priceDifference,
-      percentageChange,
-    };
+    if (percentageChange === -100 && priceDifference - 0.01) {
+      return {
+        profitLoss: 'Profit',
+        priceDifference: 0,
+        percentageChange: 0,
+      };
+    } else {
+      return {
+        profitLoss,
+        priceDifference: priceDifference,
+        percentageChange,
+      };
+    }
   }
 
   const calc = calculateEthProfit(
@@ -128,12 +136,19 @@ const BnbRow = ({ data }) => {
     } else {
       percentageChange = (priceDifference / oneDayAgoValue) * 100;
     }
-
-    return {
-      profitLoss,
-      priceDifference: priceDifference,
-      percentageChange,
-    };
+    if (percentageChange === -100 && priceDifference - 0.01) {
+      return {
+        profitLoss: 'Profit',
+        priceDifference: 0,
+        percentageChange: 0,
+      };
+    } else {
+      return {
+        profitLoss,
+        priceDifference: priceDifference,
+        percentageChange,
+      };
+    }
   }
 
   const calc = calculateEthProfit(

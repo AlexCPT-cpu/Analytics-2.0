@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { AnalyticsConsumer } from 'src/contexts/AnalyticsContext';
-import returnedData from '../../response.json';
+//import returnedData from '../../response.json';
 import formatApiData from 'src/lib/formatApiData';
 import PortfolioLayout from 'src/analytics/PortfolioLayout';
 import UserTab from 'src/analytics/UserTab';
@@ -32,9 +32,9 @@ const Page = () => {
     const setData = async () => {
       try {
         setLoading(true);
-        // const { data: returnedData } = await axios.post('/api/analysis', {
-        //   address: userId,
-        // });
+        const { data: returnedData } = await axios.post('/api/analysis', {
+          address: userId,
+        });
 
         setEthPrices(returnedData?.ethData?.ethPrices);
         setBscPrices(returnedData?.bscData?.bnbData);
@@ -45,9 +45,10 @@ const Page = () => {
           returnedData?.ethData?.ethPrices,
           returnedData?.bscData?.bnbData
         );
-
-        setApiData(dataX?.ethData);
-        setBscFiltered(dataX?.bscData);
+        const ethDataX = await noNulls(dataX?.ethData);
+        const bscDataX = await noNulls(dataX?.bscData);
+        setApiData(ethDataX);
+        setBscFiltered(bscDataX);
         setFulldata(returnedData?.ethData);
         setBscData(returnedData?.bscData);
         setLoading(false);
@@ -71,53 +72,53 @@ const Page = () => {
     setBscPrices,
   ]);
 
-  useEffect(() => {
-    const getReserve = async () => {
-      const eth = await Promise.all(
-        allData?.ethData.ethData.map((address) => {
-          if (address.reserves['0']) {
-            return {
-              address: address.token_address,
-              decimals: address.decimals,
-              maxReserve: address.reserves['0'].maxReserve,
-              exchange: address.reserves.exchange,
-              fee: address.reserves['0'].nowReserve.fee ? address.reserves['0'].nowReserve.fee : 0,
-            };
-          }
-        })
-      );
-      const bsc = await Promise.all(
-        allData?.bscData.bscData.map((address) => {
-          if (address.reserves['0']) {
-            return {
-              address: address.token_address,
-              decimals: address.decimals,
-              maxReserve: address.reserves['0'].maxReserve,
-              exchange: address.reserves.exchange,
-              fee: address.reserves['0'].nowReserve.fee ? address.reserves['0'].nowReserve.fee : 0,
-            };
-          }
-        })
-      );
-      try {
-        console.log('Call Started');
-        const ethParsed = await noNulls(eth);
-        const bscParsed = await noNulls(bsc);
+  //   useEffect(() => {
+  //     const getReserve = async () => {
+  //       const eth = await Promise.all(
+  //         allData?.ethData.ethData.map((address) => {
+  //           if (address.reserves['0']) {
+  //             return {
+  //               address: address.token_address,
+  //               decimals: address.decimals,
+  //               maxReserve: address.reserves['0'].maxReserve,
+  //               exchange: address.reserves.exchange,
+  //               fee: address.reserves['0'].nowReserve.fee ? address.reserves['0'].nowReserve.fee : 0,
+  //             };
+  //           }
+  //         })
+  //       );
+  //       const bsc = await Promise.all(
+  //         allData?.bscData.bscData.map((address) => {
+  //           if (address.reserves['0']) {
+  //             return {
+  //               address: address.token_address,
+  //               decimals: address.decimals,
+  //               maxReserve: address.reserves['0'].maxReserve,
+  //               exchange: address.reserves.exchange,
+  //               fee: address.reserves['0'].nowReserve.fee ? address.reserves['0'].nowReserve.fee : 0,
+  //             };
+  //           }
+  //         })
+  //       );
+  //       try {
+  //         console.log('Call Started');
+  //         const ethParsed = await noNulls(eth);
+  //         const bscParsed = await noNulls(bsc);
 
-        const res = await axios.post('/api/reserve', {
-          tokens: { ethTokens: ethParsed, bscTokens: bscParsed },
-          address: '0xefd01453be7b725AB3fc57D5D280FDc46609F253',
-          tier: '1H',
-        });
-        console.log(res);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    if (allData) {
-      getReserve();
-    }
-  }, [allData, userId]);
+  //         const res = await axios.post('/api/reserve', {
+  //           tokens: { ethTokens: ethParsed, bscTokens: bscParsed },
+  //           address: '0xefd01453be7b725AB3fc57D5D280FDc46609F253',
+  //           tier: '1H',
+  //         });
+  // setGraphAnalytics(res.data)
+  //       } catch (error) {
+  //         console.log(error);
+  //       }
+  //     };
+  //     if (allData) {
+  //       getReserve();
+  //     }
+  //   }, [allData, userId, setGraphAnalytics]);
 
   useEffect(() => {
     if (error) {
@@ -127,12 +128,7 @@ const Page = () => {
 
   return (
     <div className="flex min-h-screen justify-center">
-      {loading ? (
-        <PortfolioLayout />
-      ) : (
-        //  <UserTab userId={userId} />
-        <></>
-      )}
+      {loading ? <PortfolioLayout /> : <UserTab userId={userId} />}
     </div>
   );
 };

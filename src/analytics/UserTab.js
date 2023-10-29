@@ -6,7 +6,7 @@ import { GroupedList } from './GroupedList';
 import { AssetsTable } from './AssetsTable';
 import { useTheme } from '@mui/material/styles';
 import { AnalyticsConsumer } from 'src/contexts/AnalyticsContext';
-import tier from 'src/tier.json';
+//import tier from 'src/tier.json';
 import formatTier from 'src/libs/formatTier';
 import axios from 'axios';
 
@@ -52,31 +52,33 @@ const UserTab = ({ userId }) => {
 
   const eth = useMemo(
     () =>
-      allData?.ethData?.ethData?.map((address) => ({
-        address: address.token_address,
-        decimal: address.decimals,
-        pair: {
-          ...address.reserves[1],
-          pair: address.pair.pair,
-          exchange: address.pair.exchange,
-        },
-        maxReserve: address.reserves[0].maxReserve,
-      })),
+      allData?.ethData?.ethData?.map((address) => {
+        if (address.reserves['0']) {
+          return {
+            address: address.token_address,
+            decimals: address.decimals,
+            maxReserve: address.reserves['0'].maxReserve,
+            exchange: address.reserves.exchange,
+            fee: address.reserves['0'].nowReserve.fee ? address.reserves['0'].nowReserve.fee : 0,
+          };
+        }
+      }),
     [allData]
   );
 
   const bsc = useMemo(
     () =>
-      allData?.bscData?.bscData?.map((address) => ({
-        address: address.token_address,
-        decimal: address.decimals,
-        pair: {
-          ...address.reserves[1],
-          pair: address.pair.pair,
-          exchange: address.pair.exchange,
-        },
-        maxReserve: address.reserves[0].maxReserve,
-      })),
+      allData?.bscData?.bscData?.map((address) => {
+        if (address.reserves['0']) {
+          return {
+            address: address.token_address,
+            decimals: address.decimals,
+            maxReserve: address.reserves['0'].maxReserve,
+            exchange: address.reserves.exchange,
+            fee: address.reserves['0'].nowReserve.fee ? address.reserves['0'].nowReserve.fee : 0,
+          };
+        }
+      }),
     [allData]
   );
 
@@ -175,6 +177,7 @@ const UserTab = ({ userId }) => {
   const [bscDuration, setBscDuration] = useState(
     (bscHourPrices + bscData?.bscBalances?.balances?.balances[0]) * bscPrices.bnb_Price1H
   );
+
   const [bscNowBalance, setBscNowBalance] = useState(
     (bscNowPrices + bscData?.bscBalances?.balanceNow) * bscPrices.bnb_PriceNow
   );
@@ -444,12 +447,11 @@ const UserTab = ({ userId }) => {
     const getReserve = async () => {
       try {
         setLoading(true);
-        // const { data } = await axios.post('/api/reserve', {
-        //   tokens: { ethTokens: eth, bscTokens: bsc },
-        //   address: userId,
-        //   tier: '1H',
-        // });
-        //console.log(data);
+        const { data } = await axios.post('/api/reserve', {
+          tokens: { ethTokens: eth, bscTokens: bsc },
+          address: userId,
+          tier: '1H',
+        });
         setbuttons([
           {
             variant: 'contained',
@@ -473,7 +475,7 @@ const UserTab = ({ userId }) => {
           },
         ]);
         setDuratia('1H');
-        const { tier0, ethValue, bscValue } = formatTier(tier, allData, bscData);
+        const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
         setEthDuration(ethValue);
         setBscDuration(bscValue);
         setChartArr(tier0);

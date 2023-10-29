@@ -32,11 +32,19 @@ const AssetItem = ({ customer }) => {
         percentageChange = (priceDifference / oneDayAgoValue) * 100;
       }
 
-      return {
-        profitLoss,
-        priceDifference: priceDifference * fullData?.ethPrices?.eth_PriceNow,
-        percentageChange,
-      };
+      if (percentageChange === -100 && priceDifference - 0.01) {
+        return {
+          profitLoss: 'Profit',
+          priceDifference: 0,
+          percentageChange: 0,
+        };
+      } else {
+        return {
+          profitLoss,
+          priceDifference: priceDifference,
+          percentageChange,
+        };
+      }
     }
   }
 
@@ -49,11 +57,11 @@ const AssetItem = ({ customer }) => {
         .map((char) => char.toUpperCase())
         .join('');
       return initials;
-    }
+    } else return '?';
   }
 
-  const nowBal = customer?.balance;
-  const hourBal = customer?.hourBalance / 10 ** customer?.token.decimals;
+  const nowBal = Number(customer?.balance);
+  const hourBal = Number(customer?.hourBalance) / 10 ** Number(customer?.token.decimals);
 
   const nowPrice = customer?.tokenPriceEth;
   const hourPrice = customer?.hourPriceEth;
@@ -66,13 +74,13 @@ const AssetItem = ({ customer }) => {
       <TableCell>
         {customer?.logo ? (
           <img
-            src={customer?.token.logo}
+            src={customer?.token?.logo}
             className="w-7 lg:w-8 object-cover m-5"
             alt="table-logo"
           />
         ) : (
           <div className="rounded-full bg-gray-200/60 uppercase font-semibold text-xs text-[10px] w-8 h-8 lg:w-9 lg:h-9 justify-center flex text-center object-cover m-5 items-center">
-            {generateInitials(customer?.token.name)}
+            {generateInitials(customer?.token?.name)}
           </div>
         )}
       </TableCell>
@@ -86,8 +94,9 @@ const AssetItem = ({ customer }) => {
             <Link
               color="inherit"
               variant="subtitle2"
+              className="truncate"
             >
-              {customer.token.name}
+              {customer?.token?.name}
             </Link>
             <Typography
               color="text.secondary"
@@ -108,13 +117,13 @@ const AssetItem = ({ customer }) => {
           </div>
         </Stack>
       </TableCell>
-      <TableCell> ${Number(customer?.nowPrice * customer.tokenPriceEth).toFixed(8)}</TableCell>
-      <TableCell>
+      <TableCell> ${Number(customer?.nowPrice * customer?.tokenPriceEth).toFixed(8)}</TableCell>
+      <TableCell className="truncate">
         {Number(customer?.balance).toLocaleString()} {customer?.token?.symbol}
       </TableCell>
       <TableCell>
         <span className="">
-          ${Number(customer.nowPriceBal * customer.nowPrice).toLocaleString()}
+          ${Number(customer?.nowPriceBal * customer?.nowPrice).toLocaleString()}
         </span>
         <br />
         <span

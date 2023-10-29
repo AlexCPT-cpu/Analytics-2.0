@@ -1,31 +1,16 @@
-import { WETH } from 'src/config/index';
-import { WBNB } from 'src/config/index';
-import calculateTokenPrice from 'src/lib/calculateTokenPrice';
 import formatDate from 'src/lib/formatDate';
 
 const formatTier = (tier, allData, bscData) => {
   const BnbtierMaps = tier?.bscData?.bscData?.map((items) => {
     const dollarValues = items?.map((item, index) => {
-      const date = formatDate(new Date(Number(item?.reserves?.timestamp) * 1000));
+      const date = formatDate(new Date(Number(item?.reserves?.block?.timestamp) * 1000));
       let usdValue;
-      const isWeth = String(item?.pair?.token0).toLowerCase() === String(WBNB).toLowerCase();
 
-      const wethDecimals = 18;
-      const tokenDecimals = item?.decimals;
-      const nowPriceEth = isWeth
-        ? calculateTokenPrice(
-            item?.reserves?.reserve1,
-            item?.reserves?.reserve0,
-            tokenDecimals,
-            wethDecimals
-          )
-        : calculateTokenPrice(
-            item?.reserves?.reserve0,
-            item?.reserves?.reserve1,
-            tokenDecimals,
-            wethDecimals
-          );
-      const ethPrice = (nowPriceEth * Number(item?.reserves?.balance)) / 10 ** tokenDecimals;
+      const wethDecimals = 10 ** 18;
+      const tokenDecimals = item.decimals ? 10 ** parseInt(item?.decimals) : 1e18;
+      const nowPriceEth = item.reserves.ethPrice / wethDecimals;
+      const bal = Number(item?.reserves?.balance) / tokenDecimals;
+      const ethPrice = nowPriceEth * bal;
 
       if (index === 0) {
         usdValue = bscData?.bnbData?.bnb_PriceNow * ethPrice;
@@ -44,26 +29,14 @@ const formatTier = (tier, allData, bscData) => {
   });
   const EthtierMaps = tier?.ethData?.ethData?.map((items) => {
     const dollarValues = items?.map((item, index) => {
-      const date = formatDate(new Date(Number(item?.reserves?.timestamp) * 1000));
+      const date = formatDate(new Date(Number(item?.reserves?.block?.timestamp) * 1000));
       let usdValue;
-      const isWeth = String(item?.pair?.token0).toLowerCase() === String(WETH).toLowerCase();
 
-      const wethDecimals = 18;
-      const tokenDecimals = item?.decimals;
-      const nowPriceEth = isWeth
-        ? calculateTokenPrice(
-            item?.reserves?.reserve1,
-            item?.reserves?.reserve0,
-            tokenDecimals,
-            wethDecimals
-          )
-        : calculateTokenPrice(
-            item?.reserves?.reserve0,
-            item?.reserves?.reserve1,
-            tokenDecimals,
-            wethDecimals
-          );
-      const ethPrice = (nowPriceEth * Number(item.reserves.balance)) / 10 ** tokenDecimals;
+      const wethDecimals = 10 ** 18;
+      const tokenDecimals = item.decimals ? 10 ** parseInt(item?.decimals) : 1e18;
+      const nowPriceEth = item.reserves.ethPrice / wethDecimals;
+      const bal = Number(item?.reserves?.balance) / tokenDecimals;
+      const ethPrice = nowPriceEth * bal;
 
       if (index === 0) {
         usdValue = allData?.ethData?.ethPrices?.eth_PriceNow * ethPrice;
@@ -131,15 +104,26 @@ const formatTier = (tier, allData, bscData) => {
   const bscLength = sumsBsc.length > 0 ? true : false;
   const ethLength = sumsEth.length > 0 ? true : false;
 
-  const item0 = bscLength ? sumsBsc[4]?.value : 0 + ethLength ? sumsEth[4]?.value : 0;
+  const eth0 = ethLength ? sumsEth[4]?.value : 0;
+  const bsc0 = bscLength ? sumsBsc[4]?.value : 0;
 
-  const item1 = bscLength ? sumsBsc[3]?.value : 0 + ethLength ? sumsEth[3]?.value : 0;
+  const eth1 = ethLength ? sumsEth[3]?.value : 0;
+  const bsc1 = bscLength ? sumsBsc[3]?.value : 0;
 
-  const item2 = bscLength ? sumsBsc[2]?.value : 0 + ethLength ? sumsEth[2]?.value : 0;
+  const eth2 = ethLength ? sumsEth[2]?.value : 0;
+  const bsc2 = bscLength ? sumsBsc[2]?.value : 0;
 
-  const item3 = bscLength ? sumsBsc[1]?.value : 0 + ethLength ? sumsEth[1]?.value : 0;
+  const eth3 = ethLength ? sumsEth[1]?.value : 0;
+  const bsc3 = bscLength ? sumsBsc[1]?.value : 0;
 
-  const item4 = bscLength ? sumsBsc[0]?.value : 0 + ethLength ? sumsEth[0]?.value : 0;
+  const eth4 = ethLength ? sumsEth[0]?.value : 0;
+  const bsc4 = bscLength ? sumsBsc[0]?.value : 0;
+
+  const item0 = eth0 + bsc0;
+  const item1 = eth1 + bsc1;
+  const item2 = eth2 + bsc2;
+  const item3 = eth3 + bsc3;
+  const item4 = eth4 + bsc4;
 
   const tierFinal = [
     {

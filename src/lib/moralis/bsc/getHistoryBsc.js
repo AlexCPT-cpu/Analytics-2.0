@@ -11,7 +11,7 @@ const getHistoryBsc = async (tokenAddress, web3, userAddress, blocks, i, decimal
     const balanceNow = await userBalance(tokenContract, userAddress);
 
     if (balanceNow !== null) {
-      const index = i % 4;
+      const index = i % nodeRealKeys.length;
 
       const serializedThen = {
         ethPrice: 0,

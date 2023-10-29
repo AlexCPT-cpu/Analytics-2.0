@@ -6,23 +6,26 @@ const getBalanceDetails = (balance, ethData, chain) => {
     const reserves = balance?.reserves['0'];
     const hour = reserves?.dates[0];
 
-    const nowPriceEth = reserves.nowReserve.ethPrice / wethDecimals;
+    const nowPriceEth = Number(reserves.nowReserve.ethPrice) / wethDecimals;
 
-    const hourPriceEth = reserves.dates[0].ethPrice / wethDecimals;
+    const hourPriceEth = Number(reserves.dates[0].ethPrice) / wethDecimals;
 
     const nowPrice = ethData?.eth_PriceNow;
     const hourPrice = ethData?.eth_Price1H;
 
+    const nowBal = parseInt(balance?.balance) / decimals;
+    const hourBal = hour?.balance / decimals;
+
     return {
-      nowPriceBal: nowPriceEth * (parseInt(balance?.balance) / decimals),
-      hourPriceBal: hourPriceEth * (hour?.balance / decimals),
+      nowPriceBal: nowPriceEth * nowBal,
+      hourPriceBal: hourPriceEth * hourBal,
       token: balance,
       nowPrice,
       tokenPriceEth: nowPriceEth,
       hourPrice,
       hourPriceEth,
       hourBalance: hour?.balance,
-      balance: parseInt(balance?.balance) / 10 ** tokenDecimals,
+      balance: parseInt(balance?.balance) / decimals,
       chain: chain,
       exchange: balance.reserves.exchange,
     };

@@ -55,6 +55,7 @@ export const getV3PriceTime = async (token, prov, decimals, fee, block) => {
     );
     return parseInt(quotedAmountOut);
   } catch (error) {
+    console.log(error);
     return null;
   }
 };

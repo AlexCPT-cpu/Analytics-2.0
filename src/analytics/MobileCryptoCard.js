@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import numeral from 'numeral';
 import ChevronDownIcon from '@untitled-ui/icons-react/build/esm/ChevronDown';
 import ChevronUpIcon from '@untitled-ui/icons-react/build/esm/ChevronUp';
@@ -10,129 +9,12 @@ import SvgIcon from '@mui/material/SvgIcon';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useState, useEffect, useMemo } from 'react';
-import { AnalyticsConsumer } from 'src/contexts/AnalyticsContext';
-import { WETH } from 'src/config/index';
 import { MobileChart13 } from './MobileChart13';
 
 export const MobileCryptoCard = (props) => {
   const { rate, usdValue, sx, buttons, duratia, select, coinAmount, chartArr, loading } = props;
-  const [calculatedData, seCalcData] = useState([]);
+
   const [chartData, setChartData] = useState([]);
-
-  // const { graphAnalytics: graph } = AnalyticsConsumer();
-  // function addValuesAndTimes(arrayOfArrays) {
-  //   let resultArray = [];
-
-  //   for (let i = 0; i < arrayOfArrays[0].length; i++) {
-  //     let value = 0;
-  //     let time = arrayOfArrays[0][i].time;
-
-  //     for (let j = 0; j < arrayOfArrays.length; j++) {
-  //       value += Number(arrayOfArrays[j][i].value);
-  //     }
-
-  //     resultArray.push({ value, time });
-  //   }
-
-  //   return resultArray;
-  // }
-
-  // useEffect(() => {
-  //   const setPoints = async () => {
-  //     const data = await Promise.all(
-  //       graph?.ethchart.tokenReserves?.map(async (itemPoints) => {
-  //         const timedPromise = await Promise.all(
-  //           itemPoints.map(async (TItem, TIndex) => {
-  //             const blkPromise = await Promise.all(
-  //               TItem.map((item, index) => {
-  //                 let ethPrice;
-  //                 if (index === 0) {
-  //                   ethPrice = graph.ethchart.ethPrices[0][0];
-  //                 } else {
-  //                   ethPrice = graph.ethchart.ethPrices[TIndex][index];
-  //                 }
-
-  //                 const isWeth =
-  //                   String(item?.pair.token0).toLowerCase() == String(WETH).toLowerCase();
-
-  //                 if (isWeth) {
-  //                   const decimal = 10 ** parseInt(item.decimal);
-  //                   const token0 = item.reserve0 / 1e18;
-  //                   const token1 = item.reserve1 / decimal;
-  //                   const balance = item.balance / decimal;
-  //                   const itemPrice = token0 / token1;
-  //                   const ethValue = itemPrice * balance;
-
-  //                   return {
-  //                     value: Number((ethValue * ethPrice).toFixed(2)),
-  //                     time: item.time,
-  //                   };
-  //                 } else {
-  //                   const decimal = 10 ** parseInt(item.decimal);
-  //                   const token0 = item.reserve0 / decimal;
-  //                   const token1 = item.reserve1 / 1e18;
-  //                   const balance = item.balance / decimal;
-  //                   const itemPrice = token1 / token0;
-  //                   const ethValue = itemPrice * balance;
-
-  //                   return {
-  //                     value: Number((ethValue * ethPrice).toFixed(2)),
-  //                     time: item.time,
-  //                   };
-  //                 }
-  //               })
-  //             );
-
-  //             return blkPromise;
-  //           })
-  //         );
-
-  //         return timedPromise;
-  //       })
-  //     );
-
-  //     const a = [];
-  //     const b = [];
-  //     const c = [];
-  //     const e = [];
-  //     data.map((data) => {
-  //       a.push(data[0]);
-  //       b.push(data[1]);
-  //       c.push(data[2]);
-  //       e.push(data[3]);
-  //     });
-
-  //     let resulta = addValuesAndTimes(a);
-  //     let resultb = addValuesAndTimes(b);
-  //     let resultc = addValuesAndTimes(c);
-  //     let resulte = addValuesAndTimes(e);
-
-  //     const final = [resulta, resultb, resultc, resulte];
-
-  //     const ethMaps = graph.ethchart.ethBalances.map((ethArr, ethI) => {
-  //       return ethArr.map((price, prI) => {
-  //         let ethPrice;
-  //         if (prI === 0) {
-  //           ethPrice = graph.ethchart.ethPrices[0][0];
-  //         } else {
-  //           ethPrice = graph.ethchart.ethPrices[ethI][prI];
-  //         }
-  //         return price * ethPrice;
-  //       });
-  //     });
-  //     const finalMaps = final.map((finalArr, fnrI) => {
-  //       return finalArr.map((item, itI) => {
-  //         return { value: (item.value += ethMaps[fnrI][itI]), time: item.time };
-  //       });
-  //     });
-
-  //     seCalcData(finalMaps);
-  //     setChartData(finalMaps[0].reverse());
-  //   };
-  //   if (graph) {
-  //     setPoints();
-  //   }
-  // }, [graph]);
 
   useEffect(() => {
     if (chartArr.length > 0) {
@@ -272,7 +154,7 @@ export const MobileCryptoCard = (props) => {
         </div>
 
         <div
-          className={`flex flex-row items-center justify-center space-x-4 py-2 bottom-0 ${
+          className={`flex flex-row items-center justify-center space-x-2 py-2 bottom-0 ${
             loading ? 'mt-40' : ''
           }`}
         >

@@ -1,4 +1,4 @@
-import { ethProvider, alchemyUrl } from 'src/config/index';
+import { infuraKeys } from 'src/config/index';
 import { fetchV3Price } from 'src/lib/getV3Price';
 import getHistory from 'src/lib/moralis/eth/getHistory';
 import getHistoryV3 from 'src/lib/moralis/eth/getHistoryV3';
@@ -46,9 +46,8 @@ const getV2Reserves = async (tokenAddress, userAddress, provider, blocks, decima
 
 const getEthHistory = async (tokenAddress, userAddress, blocks, decimals, i) => {
   try {
-    const index = i % 2;
-    const web3Arr = [alchemyUrl, ethProvider];
-    const provider = web3Arr[index];
+    const index = i % infuraKeys.length;
+    const provider = infuraKeys[index];
     const v3Data = await getV3Reserves(tokenAddress, userAddress, provider, blocks, decimals);
 
     if (v3Data && v3Data !== null) {
