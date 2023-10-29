@@ -9,6 +9,7 @@ import { AnalyticsConsumer } from 'src/contexts/AnalyticsContext';
 //import tier from 'src/tier.json';
 import formatTier from 'src/libs/formatTier';
 import axios from 'axios';
+import noNulls from 'src/lib/noNulls';
 
 const UserTab = ({ userId }) => {
   const theme = useTheme();
@@ -199,8 +200,11 @@ const UserTab = ({ userId }) => {
     async (selector) => {
       if (selector.text === '1H') {
         try {
+          setLoading(true);
+          const ethParsed = await noNulls(eth);
+          const bscParsed = await noNulls(bsc);
           const { data } = await axios.post('/api/reserve', {
-            tokens: { ethTokens: eth, bscTokens: bsc },
+            tokens: { ethTokens: ethParsed, bscTokens: bscParsed },
             address: userId,
             tier: '1H',
           });
@@ -239,8 +243,10 @@ const UserTab = ({ userId }) => {
       } else if (selector.text === '1D') {
         try {
           setLoading(true);
+          const ethParsed = await noNulls(eth);
+          const bscParsed = await noNulls(bsc);
           const { data } = await axios.post('/api/reserve', {
-            tokens: { ethTokens: eth, bscTokens: bsc },
+            tokens: { ethTokens: ethParsed, bscTokens: bscParsed },
             address: userId,
             tier: '1D',
           });
@@ -279,8 +285,10 @@ const UserTab = ({ userId }) => {
       } else if (selector.text === '1W') {
         try {
           setLoading(true);
+          const ethParsed = await noNulls(eth);
+          const bscParsed = await noNulls(bsc);
           const { data } = await axios.post('/api/reserve', {
-            tokens: { ethTokens: eth, bscTokens: bsc },
+            tokens: { ethTokens: ethParsed, bscTokens: bscParsed },
             address: userId,
             tier: '1W',
           });
@@ -319,8 +327,10 @@ const UserTab = ({ userId }) => {
       } else if (selector.text === '1M') {
         try {
           setLoading(true);
+          const ethParsed = await noNulls(eth);
+          const bscParsed = await noNulls(bsc);
           const { data } = await axios.post('/api/reserve', {
-            tokens: { ethTokens: eth, bscTokens: bsc },
+            tokens: { ethTokens: ethParsed, bscTokens: bscParsed },
             address: userId,
             tier: '1M',
           });
@@ -360,8 +370,10 @@ const UserTab = ({ userId }) => {
       } else if (selector.text === '1Y') {
         try {
           setLoading(true);
+          const ethParsed = await noNulls(eth);
+          const bscParsed = await noNulls(bsc);
           const { data } = await axios.post('/api/reserve', {
-            tokens: { ethTokens: eth, bscTokens: bsc },
+            tokens: { ethTokens: ethParsed, bscTokens: bscParsed },
             address: userId,
             tier: '1Y',
           });
@@ -401,8 +413,10 @@ const UserTab = ({ userId }) => {
       } else {
         try {
           setLoading(true);
+          const ethParsed = await noNulls(eth);
+          const bscParsed = await noNulls(bsc);
           const { data } = await axios.post('/api/reserve', {
-            tokens: { ethTokens: eth, bscTokens: bsc },
+            tokens: { ethTokens: ethParsed, bscTokens: bscParsed },
             address: userId,
             tier: '1H',
           });
@@ -447,8 +461,11 @@ const UserTab = ({ userId }) => {
     const getReserve = async () => {
       try {
         setLoading(true);
+        const ethParsed = await noNulls(eth);
+        const bscParsed = await noNulls(bsc);
+        console.log('call started');
         const { data } = await axios.post('/api/reserve', {
-          tokens: { ethTokens: eth, bscTokens: bsc },
+          tokens: { ethTokens: ethParsed, bscTokens: bscParsed },
           address: userId,
           tier: '1H',
         });
@@ -474,6 +491,7 @@ const UserTab = ({ userId }) => {
             text: '1Y',
           },
         ]);
+
         setDuratia('1H');
         const { tier0, ethValue, bscValue } = formatTier(data, allData, bscData);
         setEthDuration(ethValue);

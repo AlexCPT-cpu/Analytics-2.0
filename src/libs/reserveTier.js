@@ -57,8 +57,8 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
                         await delay(100);
                         return {
                           address: token.address,
-                          decimals: token.decimal,
-                          reserves: pairData,
+                          decimals: token.decimals,
+                          reserves: { ...pairData, decimals: token.decimals },
                         };
                       } catch (error) {
                         await delay(100);
@@ -84,8 +84,8 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
                         await delay(100);
                         return {
                           address: token.address,
-                          decimals: token.decimal,
-                          reserves: pairData,
+                          decimals: token.decimals,
+                          reserves: { ...pairData, decimals: token.decimals },
                         };
                       } catch (error) {
                         await delay(100);
@@ -117,8 +117,8 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
                         await delay(100);
                         return {
                           address: token.address,
-                          decimals: token.decimal,
-                          reserves: pairData,
+                          decimals: token.decimals,
+                          reserves: { ...pairData, decimals: token.decimals },
                         };
                       } catch (error) {
                         await delay(100);
@@ -144,8 +144,8 @@ const reserveTier = async (address, tier, timing, bscTokens, ethTokens) => {
                         await delay(100);
                         return {
                           address: token.address,
-                          decimals: token.decimal,
-                          reserves: pairData,
+                          decimals: token.decimals,
+                          reserves: { ...pairData, decimals: token.decimals },
                         };
                       } catch (error) {
                         await delay(100);

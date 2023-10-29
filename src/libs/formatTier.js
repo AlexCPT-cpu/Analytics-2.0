@@ -7,7 +7,7 @@ const formatTier = (tier, allData, bscData) => {
       let usdValue;
 
       const wethDecimals = 10 ** 18;
-      const tokenDecimals = item.decimals ? 10 ** parseInt(item?.decimals) : 1e18;
+      const tokenDecimals = 10 ** parseInt(item?.decimals);
       const nowPriceEth = item.reserves.ethPrice / wethDecimals;
       const bal = Number(item?.reserves?.balance) / tokenDecimals;
       const ethPrice = nowPriceEth * bal;
@@ -33,7 +33,7 @@ const formatTier = (tier, allData, bscData) => {
       let usdValue;
 
       const wethDecimals = 10 ** 18;
-      const tokenDecimals = item.decimals ? 10 ** parseInt(item?.decimals) : 1e18;
+      const tokenDecimals = 10 ** parseInt(item?.decimals);
       const nowPriceEth = item.reserves.ethPrice / wethDecimals;
       const bal = Number(item?.reserves?.balance) / tokenDecimals;
       const ethPrice = nowPriceEth * bal;
